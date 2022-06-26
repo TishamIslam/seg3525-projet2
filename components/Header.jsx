@@ -1,48 +1,14 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faX, faHouseChimney, faCircleInfo, faComputer, faScrewdriverWrench, faTableList } from '@fortawesome/free-solid-svg-icons'
 import { useRouter } from 'next/router'
-
-// export default function Header(props) {
-//     const [toggled, setToggle] = useState(false)
-//     return (
-//         <nav className="text-white w-full bg-green-900">
-//             <div className="flex justify-between ">
-//                 <div className="flex">
-//                     Logo here
-//                 </div>
-//                 <button className="flex md:hidden w-8 h-8 items-center" onClick={() => { setToggle(!toggled); console.log(toggled) }}>
-//                     <FontAwesomeIcon icon={faBars} className="mx-auto text-2xl text-yellow-500" />
-//                 </button>
-//             </div>
-//             <ul>
-//                 <li><Link href="/index"><a>
-//                     <FontAwesomeIcon icon={faHouseChimney} /> Accueil
-//                 </a></Link></li>
-//                 <li><Link href="/info"><a>
-//                     <FontAwesomeIcon icon={faCircleInfo} /> Information (Recommandé pour débutantes)
-//                 </a></Link></li>
-//                 <li><Link href="/ordinateurs"><a>
-//                     <FontAwesomeIcon icon={faComputer} /> Voir les ordinateurs des autres
-//                 </a></Link></li>
-//                 <li><Link href="/construire"><a>
-//                     <FontAwesomeIcon icon={faScrewdriverWrench} /> Créer un ordinateur
-//                 </a></Link></li>
-//                 <li><Link href="/composants/index"><a>
-//                     <FontAwesomeIcon icon={faTableList} /> Voir des Composantes Individuel
-//                 </a></Link></li>
-//             </ul>
-//         </nav>
-//     )
-// }
-
 import { Disclosure } from '@headlessui/react'
 
 const navigation = [
-    { name: 'Accueil', href: '/index', current: true, icon: faHouseChimney },
+    { name: 'Accueil', href: '/', current: true, icon: faHouseChimney },
     { name: 'Information', href: '/info', current: false, icon: faCircleInfo },
     { name: 'Ordinateurs', href: '/ordinateurs', current: false, icon: faComputer },
     { name: 'Créer un ordinateur', href: '/construire', current: false, icon: faScrewdriverWrench },
-    { name: 'Composantes Individuels', href: '/composants/', current: false, icon: faTableList },
+    { name: 'Composantes Individuels', href: '/composants', current: false, icon: faTableList },
 ]
 
 function classNames(...classes) {
@@ -52,6 +18,9 @@ function classNames(...classes) {
 // adapted from https://tailwindui.com/components/application-ui/navigation/navbars
 export default function Header() {
     const router = useRouter()
+
+    //sets whichever page is current as current by checking the url
+    //home is current by default since it's just /
     navigation.forEach(pageInfo => {
         if (router.pathname.includes(pageInfo.href)) {
             navigation[0].current = false;
