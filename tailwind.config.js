@@ -17,6 +17,11 @@ module.exports = {
           dark: '#073C15',
           DEFAULT: '#094C1C'
         },
+        mint: {
+          light: '#CFFEDC',
+          dark: '#7DDB98',
+          DEFAULT: '#A0EBB5'
+        }
       }
     },
   },
