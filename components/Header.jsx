@@ -58,12 +58,12 @@ export default function Header() {
                             </div>
                             <div className="absolute inset-y-0 right-0 flex items-center md:hidden">
                                 {/* Mobile menu button*/}
-                                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-2xl hover:text-gold-light text-gold active:text-gold-dark hover:bg-text-yellow-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                                <Disclosure.Button className="inline-flex p-2 items-center justify-center rounded-md text-2xl hover:text-gold-light text-gold active:text-gold-dark hover:bg-text-yellow-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                                     <span className="sr-only">Open main menu</span>
                                     {open ? (
-                                        <FontAwesomeIcon icon={faX} className="block h-6 w-6" aria-hidden="true" />
+                                        <FontAwesomeIcon icon={faX} className="block" size="lg" aria-hidden="true" />
                                     ) : (
-                                        <FontAwesomeIcon icon={faBars} className="block h-6 w-6" aria-hidden="true" />
+                                        <FontAwesomeIcon icon={faBars} className="block" size="lg" aria-hidden="true" />
                                     )}
                                 </Disclosure.Button>
                             </div>
