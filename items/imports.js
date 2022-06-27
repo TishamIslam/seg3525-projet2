@@ -44,6 +44,15 @@ import fan3 from "./fan/fan3.jpg"
 import fan4 from "./fan/fan4.jpg"
 import fan5 from "./fan/fan5.jpg"
 
+import case1 from "./case/case1.jpg"
+import case2 from "./case/case2.jpg"
+import case3 from "./case/case3.jpg"
+import case4 from "./case/case4.jpg"
+import case5 from "./case/case5.jpg"
+
+
+
+
 export const computerComponents = {
     gpu: [
         {img: gpu1, alt: "GPU 1", name: "GPU 1", price: "Prix: $2500"},
@@ -97,6 +106,13 @@ export const computerComponents = {
         {img: fan3, alt: "Ventilateur 3", name: "Ventilateur 3", price: "Prix: $60"},
         {img: fan4, alt: "Ventilateur 4", name: "Ventilateur 4", price: "Prix: $75"},
         {img: fan5, alt: "Ventilateur 5", name: "Ventilateur 5", price: "Prix: $125"},
+    ],
+    case: [
+        {img: case1, alt: "Boîtier 1", name: "Boîtier 1", price: "Prix: $250"},
+        {img: case2, alt: "Boîtier 2", name: "Boîtier 2", price: "Prix: $200"},
+        {img: case3, alt: "Boîtier 3", name: "Boîtier 3", price: "Prix: $150"},
+        {img: case4, alt: "Boîtier 4", name: "Boîtier 4", price: "Prix: $100"},
+        {img: case5, alt: "Boîtier 5", name: "Boîtier 5", price: "Prix: $125"},
     ],
 
 }

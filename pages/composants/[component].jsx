@@ -10,11 +10,10 @@ const Component = () => {
         if (router.isReady) {
             return computerComponents[component].map((obj, index) => {
                 return (
-                    <ItemCard key={index} image={obj.img} imageAlt={obj.alt} button={true} plus={true} text={<><p>{obj.name}</p><p>{obj.price}</p></>} />
+                    <ItemCard key={index} image={obj.img} imageAlt={obj.alt} button={true} 
+                    plus={true} text={<><p>{obj.name}</p><p>{obj.price}</p></>} />
                 )
             })
-        } else {
-            return
         }
     }
 
