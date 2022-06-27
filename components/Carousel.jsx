@@ -21,7 +21,7 @@ export default function Carousel(props) {
     return (
         <div className="flex justify-between">
             <button className="my-auto" onClick={() => handleSlideChange(-1)}>
-                <FontAwesomeIcon icon={faChevronLeft} className="text-3xl" />
+                <FontAwesomeIcon icon={faChevronLeft} className="text-3xl sm:text-6xl" />
             </button>
             <div className="w-full max-w-lg flex p-2">
                 {Children.map(props.children, (child, index) => {
@@ -33,7 +33,7 @@ export default function Carousel(props) {
                 })}
             </div>
             <button className="my-auto" onClick={() => handleSlideChange(1)}>
-                <FontAwesomeIcon icon={faChevronRight} className="text-3xl" />
+                <FontAwesomeIcon icon={faChevronRight} className="text-3xl sm:text-6xl" />
             </button>
         </div>
     )

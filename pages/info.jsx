@@ -1,5 +1,7 @@
 import Carousel from "../components/Carousel"
 import CarouselCard from "../components/CarouselCard"
+import EmbeddedYTVid from "../components/EmbeddedYoutubeVideo"
+
 import computer1 from "../public/Images/computer1.jpeg"
 import computer2 from "../public/Images/computer2.png"
 import computer3 from "../public/Images/computer3.jpeg"
@@ -34,12 +36,12 @@ export default function Information() {
             <h2 className="text-xl my-2">Comment choisir les composantes correctes? </h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-            <iframe src="https://www.youtube.com/embed/_Cg-MNGuYWY" className="my-4 w-full h-60" ></iframe>
+            <EmbeddedYTVid URL="https://www.youtube.com/embed/_Cg-MNGuYWY" />
 
             <h2 className="text-xl my-2">Comment construire un ordinateur?</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, reprehenderit illo ad quas, perspiciatis perferendis 
                 officia autem unde soluta explicabo consequuntur atque maiores veniam quisquam quae odio ullam temporibus molestias.</p>
-            <iframe src="https://www.youtube.com/embed/PXaLc9AYIcg" className="my-4 w-full h-60" ></iframe>
+            <EmbeddedYTVid URL="https://www.youtube.com/embed/PXaLc9AYIcg" />
         </>
     )
 }
