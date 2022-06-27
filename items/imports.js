@@ -50,8 +50,11 @@ import case3 from "./case/case3.jpg"
 import case4 from "./case/case4.jpg"
 import case5 from "./case/case5.jpg"
 
-
-
+import windows1 from "./os/windows1.jpg"
+import windows2 from "./os/windows2.jpg"
+import windows3 from "./os/windows3.jpg"
+import windows4 from "./os/windows4.jpg"
+import windows5 from "./os/windows5.jpg"
 
 export const computerComponents = {
     gpu: [
@@ -114,5 +117,13 @@ export const computerComponents = {
         {img: case4, alt: "Boîtier 4", name: "Boîtier 4", price: "Prix: $100"},
         {img: case5, alt: "Boîtier 5", name: "Boîtier 5", price: "Prix: $125"},
     ],
+    os: [
+        {img: windows1, alt: "Windows 10 Home", name: "Windows 10 Home", price: "Prix: $150"},
+        {img: windows2, alt: "Windows 10 Pro", name: "Windows 10 Pro", price: "Prix: $250"},
+        {img: windows3, alt: "Windows 10 OEM", name: "Windows 10 OEM", price: "Prix: $100"},
+        {img: windows4, alt: "Windows 11 Pro", name: "Windows 11 Pro", price: "Prix: $100"},
+        {img: windows5, alt: "Windows 11 Home", name: "Windows 11 Home", price: "Prix: $125"},
+    ],
+    
 
 }
