@@ -32,6 +32,12 @@ import nvme1 from "./storage/nvme1.jpg"
 import nvme2 from "./storage/nvme2.jpg"
 import nvme3 from "./storage/nvme3.jpg"
 
+import ram1 from "./ram/ram1.jpg"
+import ram2 from "./ram/ram2.jpg"
+import ram3 from "./ram/ram3.jpg"
+import ram4 from "./ram/ram4.jpg"
+import ram5 from "./ram/ram5.jpg"
+
 export const computerComponents = {
     gpu: [
         {img: gpu1, alt: "GPU 1", name: "GPU 1", price: "Prix: $2500"},
@@ -71,6 +77,13 @@ export const computerComponents = {
         {img: nvme1, alt: "NVMe 1", name: "NVMe 1", price: "Prix: $100"},
         {img: nvme2, alt: "NVMe 2", name: "NVMe 2", price: "Prix: $450"},
         {img: nvme3, alt: "NVMe 3", name: "NVMe 3", price: "Prix: $250"},
+    ],
+    ram: [
+        {img: ram1, alt: "RAM 1", name: "RAM 1", price: "Prix: $100"},
+        {img: ram2, alt: "RAM 2", name: "RAM 2", price: "Prix: $175"},
+        {img: ram3, alt: "RAM 3", name: "RAM 3", price: "Prix: $150"},
+        {img: ram4, alt: "RAM 4", name: "RAM 4", price: "Prix: $75"},
+        {img: ram5, alt: "RAM 5", name: "RAM 5", price: "Prix: $125"},
+    ],
 
-    ]
 }
