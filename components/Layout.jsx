@@ -6,7 +6,7 @@ export default function Layout({children}) {
     return (
         <div className="bg-mint-light">
         <Header />
-            <main className=" min-h-screen">{children}</main>
+            <main className="p-4 min-h-screen">{children}</main>
         <Footer />
         </div>
     )
