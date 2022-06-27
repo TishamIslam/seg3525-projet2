@@ -22,6 +22,16 @@ import power3 from "./power/power3.jpg"
 import power4 from "./power/power4.jpg"
 import power5 from "./power/power5.jpg"
 
+import hdd1 from "./storage/hdd1.jpg"
+import hdd2 from "./storage/hdd2.jpg"
+import hdd3 from "./storage/hdd3.jpg"
+import ssd1 from "./storage/ssd1.jpg"
+import ssd2 from "./storage/ssd2.jpg"
+import ssd3 from "./storage/ssd3.jpg"
+import nvme1 from "./storage/nvme1.jpg"
+import nvme2 from "./storage/nvme2.jpg"
+import nvme3 from "./storage/nvme3.jpg"
+
 export const computerComponents = {
     gpu: [
         {img: gpu1, alt: "GPU 1", name: "GPU 1", price: "Prix: $2500"},
@@ -51,4 +61,16 @@ export const computerComponents = {
         {img: power4, alt: "Alimentation électrique 4", name: "Alimentation électrique 4", price: "Prix: $75"},
         {img: power5, alt: "Alimentation électrique 5", name: "Alimentation électrique 5", price: "Prix: $125"},
     ],
+    storage: [
+        {img: hdd1, alt: "HDD 1", name: "HDD 1", price: "Prix: $65"},
+        {img: hdd2, alt: "HDD 2", name: "HDD 2", price: "Prix: $125"},
+        {img: hdd3, alt: "HDD 3", name: "HDD 3", price: "Prix: $250"},
+        {img: ssd1, alt: "SSD 1", name: "SSD 1", price: "Prix: $100"},
+        {img: ssd2, alt: "SSD 2", name: "SSD 2", price: "Prix: $125"},
+        {img: ssd3, alt: "SSD 3", name: "SSD 3", price: "Prix: $200"},
+        {img: nvme1, alt: "NVMe 1", name: "NVMe 1", price: "Prix: $100"},
+        {img: nvme2, alt: "NVMe 2", name: "NVMe 2", price: "Prix: $450"},
+        {img: nvme3, alt: "NVMe 3", name: "NVMe 3", price: "Prix: $250"},
+
+    ]
 }
