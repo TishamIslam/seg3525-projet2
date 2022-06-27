@@ -34,12 +34,12 @@ export default function Information() {
             <h2 className="text-xl my-2">Comment choisir les composantes correctes? </h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-            <iframe src="https://www.youtube.com/embed/_Cg-MNGuYWY" frameborder="0" className="my-4 w-full h-60" ></iframe>
+            <iframe src="https://www.youtube.com/embed/_Cg-MNGuYWY" className="my-4 w-full h-60" ></iframe>
 
             <h2 className="text-xl my-2">Comment construire un ordinateur?</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, reprehenderit illo ad quas, perspiciatis perferendis 
                 officia autem unde soluta explicabo consequuntur atque maiores veniam quisquam quae odio ullam temporibus molestias.</p>
-            <iframe src="https://www.youtube.com/embed/PXaLc9AYIcg" frameborder="0" className="my-4 w-full h-60" ></iframe>
+            <iframe src="https://www.youtube.com/embed/PXaLc9AYIcg" className="my-4 w-full h-60" ></iframe>
         </>
     )
 }
