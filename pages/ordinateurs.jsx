@@ -1,5 +1,9 @@
 
 
 export default function ViewComputers() {
-    return (<></>)
+    return (
+    <>
+    
+    </>
+    )
 }
