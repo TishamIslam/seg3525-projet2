@@ -56,6 +56,22 @@ import windows3 from "./os/windows3.jpg"
 import windows4 from "./os/windows4.jpg"
 import windows5 from "./os/windows5.jpg"
 
+import mouse1 from "./accessory/mouse1.jpg"
+import mouse2 from "./accessory/mouse2.jpg"
+import mouse3 from "./accessory/mouse3.jpg"
+import mouse4 from "./accessory/mouse4.jpg"
+import mouse5 from "./accessory/mouse5.jpg"
+import keyboard1 from "./accessory/keyboard1.jpg"
+import keyboard2 from "./accessory/keyboard2.jpg"
+import keyboard3 from "./accessory/keyboard3.jpg"
+import keyboard4 from "./accessory/keyboard4.jpg"
+import keyboard5 from "./accessory/keyboard5.jpg"
+import monitor1 from "./accessory/monitor1.jpg"
+import monitor2 from "./accessory/monitor2.jpg"
+import monitor3 from "./accessory/monitor3.jpg"
+import monitor4 from "./accessory/monitor4.jpg"
+import monitor5 from "./accessory/monitor5.jpg"
+
 export const computerComponents = {
     gpu: [
         {img: gpu1, alt: "GPU 1", name: "GPU 1", price: "Prix: $2500"},
@@ -123,6 +139,23 @@ export const computerComponents = {
         {img: windows3, alt: "Windows 10 OEM", name: "Windows 10 OEM", price: "Prix: $100"},
         {img: windows4, alt: "Windows 11 Pro", name: "Windows 11 Pro", price: "Prix: $100"},
         {img: windows5, alt: "Windows 11 Home", name: "Windows 11 Home", price: "Prix: $125"},
+    ],
+    accessory: [
+        {img: monitor1, alt: "Écran 1", name: "Écran 1", price: "Prix: $150"},
+        {img: monitor2, alt: "Écran 2", name: "Écran 2", price: "Prix: $250"},
+        {img: monitor3, alt: "Écran 3", name: "Écran 3", price: "Prix: $100"},
+        {img: monitor4, alt: "Écran 4", name: "Écran 4", price: "Prix: $100"},
+        {img: monitor5, alt: "Écran 5", name: "Écran 5", price: "Prix: $125"},
+        {img: mouse1, alt: "Souris 1", name: "Souris 1", price: "Prix: $150"},
+        {img: mouse2, alt: "Souris 2", name: "Souris 2", price: "Prix: $250"},
+        {img: mouse3, alt: "Souris 3", name: "Souris 3", price: "Prix: $100"},
+        {img: mouse4, alt: "Souris 4", name: "Souris 4", price: "Prix: $100"},
+        {img: mouse5, alt: "Souris 5", name: "Souris 5", price: "Prix: $125"},
+        {img: keyboard1, alt: "Clavier 1", name: "Clavier 1", price: "Prix: $150"},
+        {img: keyboard2, alt: "Clavier 2", name: "Clavier 2", price: "Prix: $250"},
+        {img: keyboard3, alt: "Clavier 3", name: "Clavier 3", price: "Prix: $100"},
+        {img: keyboard4, alt: "Clavier 4", name: "Clavier 4", price: "Prix: $100"},
+        {img: keyboard5, alt: "Clavier 5", name: "Clavier 5", price: "Prix: $125"},
     ],
     
 
