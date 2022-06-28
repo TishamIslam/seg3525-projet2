@@ -2,7 +2,7 @@ import { useRouter } from 'next/router'
 import { computerComponents } from '../../items/imports'
 import ItemCard from '../../components/ItemCard'
 
-const Component = () => {
+export default function Component() {
     const router = useRouter()
     const { component } = router.query
 
@@ -11,7 +11,7 @@ const Component = () => {
             return computerComponents[component].map((obj, index) => {
                 return (
                     <ItemCard key={index} image={obj.img} imageAlt={obj.alt} button={true} 
-                    plus={true} text={<><p>{obj.name}</p><p>{obj.price}</p></>} />
+                    plus={true} text={<><p>{obj.name}</p><p>Prix: ${obj.price}</p></>} />
                 )
             })
         }
@@ -27,4 +27,3 @@ const Component = () => {
     )
 }
 
-export default Component
