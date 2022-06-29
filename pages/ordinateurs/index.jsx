@@ -1,5 +1,5 @@
 import Carousel from "../../components/Carousel"
-import CarouselCard from "../../components/CarouselCard"
+import DisplayCard from "../../components/DisplayCard"
 import { computers } from "../../items/imports"
 
 export default function Ordinateurs() {
@@ -21,7 +21,7 @@ export default function Ordinateurs() {
             <Carousel>
                 {computers.map((value, index) => {
                     return (
-                        <CarouselCard key={index} text={cardText} imageAlt={"Computer " + (index + 1)} image={value} URL={"ordinateurs/" + (index + 1)} />
+                        <DisplayCard key={index} text={cardText} imageAlt={"Computer " + (index + 1)} image={value} URL={"ordinateurs/" + (index + 1)} />
                     )
                 })}
             </Carousel>

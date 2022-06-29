@@ -1,5 +1,5 @@
 import Carousel from "../components/Carousel"
-import CarouselCard from "../components/CarouselCard"
+import DisplayCard from "../components/DisplayCard"
 import EmbeddedYTVid from "../components/EmbeddedYoutubeVideo"
 
 import { computers } from "../items/imports"
@@ -24,7 +24,7 @@ export default function Information() {
             <Carousel>
                 {computers.map((value, index) => {
                     return (
-                        <CarouselCard key={index} text={cardText} imageAlt="alt text" image={value} URL={"ordinateurs/" + index} />
+                        <DisplayCard key={index} text={cardText} imageAlt="alt text" image={value} URL={"ordinateurs/" + index} />
                     )
                 })}
             </Carousel>
