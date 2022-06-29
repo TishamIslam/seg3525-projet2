@@ -10,6 +10,7 @@
     h1 {
         @apply text-3xl;
     }
+
     h2 {
         @apply text-xl;
     }
@@ -21,4 +22,12 @@
         @apply ring-offset-3;
         @apply ring-offset-gold-light;
     }
+}
+
+.next-image-block > span {
+    display: block !important;
+}
+
+.next-image-full > span {
+    height: 100% !important;
 }
