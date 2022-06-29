@@ -1,15 +1,10 @@
+import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faX, faHouseChimney, faCircleInfo, faComputer, faScrewdriverWrench, faTableList } from '@fortawesome/free-solid-svg-icons'
 import { useRouter } from 'next/router'
 import { Disclosure } from '@headlessui/react'
 
-const navigation = [
-    { name: 'Accueil', href: '/', current: true, icon: faHouseChimney },
-    { name: 'Information', href: '/info', current: false, icon: faCircleInfo },
-    { name: 'Ordinateurs', href: '/ordinateurs', current: false, icon: faComputer },
-    { name: 'Créer un ordinateur', href: '/construire', current: false, icon: faScrewdriverWrench },
-    { name: 'Composantes Individuels', href: '/composants', current: false, icon: faTableList },
-]
+
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -19,15 +14,25 @@ function classNames(...classes) {
 export default function Header() {
     const router = useRouter()
 
+    const navigation = [
+        { name: 'Accueil', href: '/', current: true, icon: faHouseChimney },
+        { name: 'Information', href: '/info', current: false, icon: faCircleInfo },
+        { name: 'Ordinateurs', href: '/ordinateurs', current: false, icon: faComputer },
+        { name: 'Créer un ordinateur', href: '/construire', current: false, icon: faScrewdriverWrench },
+        { name: 'Composantes Individuels', href: '/composants', current: false, icon: faTableList },
+    ]
+
     //sets whichever page is current as current by checking the url
     //home is current by default since it's just /
-    navigation.forEach(pageInfo => {
-        if (router.pathname.includes(pageInfo.href)) {
-            navigation[0].current = false;
-            pageInfo.current = true;
-        }
-    })
+    function checkCurrentPage() {
+        navigation.forEach(pageInfo => {
+            if (router.pathname.includes(pageInfo.href)) {
+                navigation[0].current = false;
+                pageInfo.current = true;
+            }
+        })
 
+    }
     return (
         <Disclosure as="nav" className="bg-green">
             {({ open }) => (
@@ -40,18 +45,19 @@ export default function Header() {
                                 </div>
                                 <div className="hidden md:block md:ml-6">
                                     <div className="flex space-x-4">
+                                        {checkCurrentPage()}
                                         {navigation.map((item) => (
-                                            <a
-                                                key={item.name}
-                                                href={item.href}
-                                                className={classNames(
-                                                    item.current ? 'bg-green-dark text-white' : 'text-gray-200 active:bg-green-dark hover:bg-green-light hover:text-white',
-                                                    'px-3 py-2 rounded-md text-sm font-medium'
-                                                )}
-                                                aria-current={item.current ? 'page' : undefined}
-                                            >
-                                                {item.name}
-                                            </a>
+                                            <Link href={item.href} key={item.name}>
+                                                <a
+                                                    className={classNames(
+                                                        item.current ? 'bg-green-dark text-white' : 'text-gray-200 active:bg-green-dark hover:bg-green-light hover:text-white',
+                                                        'px-3 py-2 rounded-md text-sm font-medium'
+                                                    )}
+                                                    aria-current={item.current ? 'page' : undefined}
+                                                >
+                                                    {item.name}
+                                                </a>
+                                            </Link>
                                         ))}
                                     </div>
                                 </div>

@@ -22,6 +22,9 @@ module.exports = {
           dark: '#7DDB98',
           DEFAULT: '#A0EBB5'
         }
+      },
+      ringOffsetWidth: {
+        '3': '3px',
       }
     },
   },

@@ -7,4 +7,27 @@
         @apply hover:underline;
     }
 
+    h1 {
+        @apply text-3xl;
+    }
+
+    h2 {
+        @apply text-xl;
+    }
+
+    *:focus-visible {
+        @apply outline-none;
+        @apply ring-2;
+        @apply ring-green-dark;
+        @apply ring-offset-3;
+        @apply ring-offset-gold-light;
+    }
+}
+
+.next-image-block > span {
+    display: block !important;
+}
+
+.next-image-full > span {
+    height: 100% !important;
 }

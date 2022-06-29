@@ -5,7 +5,6 @@ export default function Home() {
     <div>
       <Head>
         <title>TI Tech Support - Accueil</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       
     </div>
