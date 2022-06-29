@@ -1,15 +1,17 @@
 import { useRouter } from "next/router"
 
-import CarouselCard from "../../components/CarouselCard"
+import DisplayCard from "../../components/DisplayCard"
 import Comment from "../../components/Comment"
-import { computers } from "../../items/imports"
+import { computers, games, fps } from "../../items/imports"
+
+
 
 export default function Ordinateur() {
     const router = useRouter()
     const { ordi } = router.query
 
     const cardText = (
-        <div className="p-2">
+        <div>
             <h2 className="text-xl">Ordinateur A</h2>
             <p>CPU: Details</p>
             <p>GPU: Details</p>
@@ -21,16 +23,34 @@ export default function Ordinateur() {
     function renderComputer() {
         if (router.isReady) {
             return (
-                <CarouselCard text={cardText} imageAlt="alt text" image={computers[ordi]} />
+                <DisplayCard text={cardText} imageAlt="Ordinateur A" image={computers[ordi]} />
+            )
+        }
+    }
+
+    function renderGameFPS() {
+        if (router.isReady) {
+            return (
+                <div className="py-4 md:grid md:grid-cols-2 md:gap-8">
+                    {games.map((game, index) => {
+                        return (
+                            <DisplayCard objectFit="cover" key={index} text={<p>IPS pour {game.name}: {fps[ordi][index]}</p>} image={game.img} imgWidth={540} imgHeight={300} />
+                        )
+                    })}
+                </div>
             )
         }
     }
 
     return (
         <>
-            <h1>Détails de Ordinateur A</h1>
+            <h1 className="text-center">Détails de Ordinateur A</h1>
             <div className="my-4 max-w-xl mx-auto">
                 {renderComputer()}
+            </div>
+            <div className="py-8">
+                <h2 className="text-center ">Détails de comportement sur des jeux vidéos</h2>
+                {renderGameFPS()}
             </div>
 
             <h2 className="mt-8 text-center "> Section de commentaires</h2>
