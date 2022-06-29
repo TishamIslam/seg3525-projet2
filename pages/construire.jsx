@@ -59,10 +59,16 @@ export default function BuildComputer() {
                 <ActionButton plus={true} link="/composants/accessory" />
             </div>
 
+            {/* Video game analysis section */}
+            <hr className="border-2 border-green" />
+            <div className="py-4">    
+                <h2>Erreur: Tu n'a pas choisi assez de composants pour voir un analyse de jeux vidéos</h2>
+            </div>
+
             {/* Buying section */}
             <hr className="border-2 border-green" />
             <div className="p-2 my-2 flex justify-between items-center">
-                <span>Coût totale: 2315 $</span>
+                <span className="text-lg">Coût totale: 2315 $</span>
                 <button className="p-2 rounded-md bg-green hover:bg-green-light text-white">
                     Achetez maintenant!
                 </button>
