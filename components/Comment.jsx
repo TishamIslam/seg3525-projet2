@@ -10,13 +10,13 @@ export default function Comment(props) {
 
     return (
         <div >
-            <details className={"bg-mint-dark max-w-sm lg:max-w-md mt-4 rounded-md " + indent[props?.indent ?? 0]} open>
-                <summary className="p-2 flex space-x-2 relative h-20" onClick={() => {setShowText(!showText)}}>
+            <details className={"max-w-sm lg:max-w-md mt-4" + indent[props?.indent ?? 0]} open>
+                <summary className="p-2 bg-mint flex space-x-2 relative h-20 rounded-t-md border border-mint-dark" onClick={() => {setShowText(!showText)}}>
                     <Image src={profile} width="64px" height="64px" objectFit="cover" />
                     <h3 className="text-xl">{props?.name ?? "Anonyme"}</h3>
                     <FontAwesomeIcon size="xl" icon={!showText ? faChevronCircleUp : faChevronCircleDown} className="absolute right-2 bottom-2" />
                 </summary>
-                <div className="p-2 bg-gray-100 flex rounded-b-md">
+                <div className="p-2 bg-gray-100 flex rounded-b-md border border-mint-dark">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto laudantium dicta numquam earum in
                         modi odit voluptatum harum asperiores ut, ducimus dolore quae sapiente error facere? Necessitatibus qui laboriosam fugiat.</p>
                 </div>
