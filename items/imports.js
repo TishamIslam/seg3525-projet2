@@ -136,7 +136,7 @@ export const computerComponents = {
         { img: ssd1, alt: "SSD 1", name: "SSD 1", price: 100 },
         { img: ssd2, alt: "SSD 2", name: "SSD 2", price: 125 },
         { img: ssd3, alt: "SSD 3", name: "SSD 3", price: 200 },
-        { img: nvme1, alt: "NVMe 1", name: "NVMe 1", price: 100 },
+        { img: nvme1, alt: "Samsung M.2 NVMe 1TB", name: "Samsung M.2 NVMe 1TB", price: 100 },
         { img: nvme2, alt: "NVMe 2", name: "NVMe 2", price: 450 },
         { img: nvme3, alt: "NVMe 3", name: "NVMe 3", price: 250 },
     ],
