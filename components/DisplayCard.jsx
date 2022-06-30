@@ -19,7 +19,7 @@ export default function DisplayCard(props) {
     return (
         <div className={"w-full"}>
             {props?.URL ?? false ? <Link href={props.URL}>
-                <a className="no-underline">
+                <a>
                     {card}
                 </a>
             </Link> : card}

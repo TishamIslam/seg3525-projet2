@@ -20,23 +20,11 @@ export default function Components() {
         <>
             <h1 className="text-3xl">Liste de composants offert: </h1>
             
-            <ul className="text-green">
+            <ul>
                 {links.map((link, index) => {
-                    return (<li className="hover:text-green-light" key={index}><a href={"/composants/" + link}>{text[link]}</a></li>)
+                    return (<li className="green-link" key={index}><a href={"/composants/" + link}>{text[link]}</a></li>)
                 })}
             </ul>
-
-                {/* renders like this
-                <li><a href="/composants/cpu">CPU</a></li>
-                <li><a href="/composants/motherboard">Carte-mère</a></li>
-                <li><a href="/composants/storage">Mémoire</a></li>
-                <li><a href="/composants/ram">RAM</a></li>
-                <li><a href="/composants/fan">Ventilateurs </a></li>
-                <li><a href="/composants/gpu">Cartes Graphiques (GPU)</a></li>
-                <li><a href="/composants/case">Boîtiers</a></li>
-                <li><a href="/composants/power">Alimentation électrique</a></li>
-                <li><a href="/composants/os">Système d'exploitation</a></li>
-                <li><a href="/composants/accessory">Accessoires</a></li> */}
         </>
     )
 }
