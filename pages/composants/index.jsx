@@ -1,28 +1,36 @@
-
+import Link from "next/link"
 
 export default function Components() {
-    const links = ["cpu", "motherboard", "storage", "ram", "fan", "gpu", "case", "power", "os", "accessory"]
-
-    //can be easily put into locale
-    const text = {
-        cpu: "CPU",
-        motherboard: "Carte-mère",
-        storage: "Mémoire",
-        ram: "RAM",
-        fan: "Ventilateurs",
-        gpu: "Cartes Graphiques (GPU)",
-        case: "Boîtiers",
-        power: "Alimentation électrique",
-        os: "Système d'exploitation",
-        accessory: "Accessoires"
-    }
+    const componentsList = [
+        { name: "CPU", link: "cpu", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, saepe veniam recusandae, neque, nisi quisquam aspernatur harum ipsum repellat ullam molestiae quae. Blanditiis tempora eum quam in esse autem ipsum." },
+        { name: "Carte-mère", link: "motherboard", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, saepe veniam recusandae, neque, nisi quisquam aspernatur harum ipsum repellat ullam molestiae quae. Blanditiis tempora eum quam in esse autem ipsum." },
+        { name: "Mémoire", link: "storage", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, saepe veniam recusandae, neque, nisi quisquam aspernatur harum ipsum repellat ullam molestiae quae. Blanditiis tempora eum quam in esse autem ipsum." },
+        { name: "RAM", link: "ram", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, saepe veniam recusandae, neque, nisi quisquam aspernatur harum ipsum repellat ullam molestiae quae. Blanditiis tempora eum quam in esse autem ipsum." },
+        { name: "Ventilateurs", link: "fan", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, saepe veniam recusandae, neque, nisi quisquam aspernatur harum ipsum repellat ullam molestiae quae. Blanditiis tempora eum quam in esse autem ipsum." },
+        { name: "Cartes Graphiques (GPU)", link: "gpu", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, saepe veniam recusandae, neque, nisi quisquam aspernatur harum ipsum repellat ullam molestiae quae. Blanditiis tempora eum quam in esse autem ipsum." },
+        { name: "Boîtiers", link: "case", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, saepe veniam recusandae, neque, nisi quisquam aspernatur harum ipsum repellat ullam molestiae quae. Blanditiis tempora eum quam in esse autem ipsum." },
+        { name: "Alimentation électrique", link: "power", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, saepe veniam recusandae, neque, nisi quisquam aspernatur harum ipsum repellat ullam molestiae quae. Blanditiis tempora eum quam in esse autem ipsum." },
+        { name: "Système d'exploitation", link: "os", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, saepe veniam recusandae, neque, nisi quisquam aspernatur harum ipsum repellat ullam molestiae quae. Blanditiis tempora eum quam in esse autem ipsum." },
+        { name: "Accessoires", link: "accessory", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, saepe veniam recusandae, neque, nisi quisquam aspernatur harum ipsum repellat ullam molestiae quae. Blanditiis tempora eum quam in esse autem ipsum." }
+    ]
     return (
         <>
             <h1 className="text-3xl">Liste de composants offert: </h1>
-            
+
             <ul>
-                {links.map((link, index) => {
-                    return (<li className="green-link" key={index}><a href={"/composants/" + link}>{text[link]}</a></li>)
+                {componentsList.map((component, index) => {
+                    const [name, link, desc] = [component.name, component.link, component.desc]
+                    return (
+                        <li className="my-4" key={index}>
+                            <Link href={"/composants/" + link}><a className="green-link font-medium text-xl" >{name}</a></Link>
+                            <details>
+                                <summary>Détailes à propos de {name}</summary>
+                                <p>
+                                    {desc}
+                                </p>
+                            </details>
+                        </li>
+                    )
                 })}
             </ul>
         </>
