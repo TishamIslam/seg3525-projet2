@@ -1,3 +1,5 @@
+import Head from "next/head"
+
 import Carousel from "../../components/Carousel"
 import DisplayCard from "../../components/DisplayCard"
 import { computers } from "../../items/imports"
@@ -15,6 +17,9 @@ export default function Ordinateurs() {
 
     return (
         <>
+        <Head>
+            <title>TI Tech Support - Ordinateurs</title>
+        </Head>
             <h1>Ordinateurs</h1>
             <p>Ici tu peux voir les ordinateurs que des autres personnes ont créés, puis téléchargé ici 
                 pour les montrer aux autres, comme inspiration, pour obtenir des commentaires, etc.

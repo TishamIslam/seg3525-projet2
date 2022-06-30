@@ -1,4 +1,5 @@
 import { useRouter } from "next/router"
+import Head from "next/head"
 
 import DisplayCard from "../../components/DisplayCard"
 import Comment from "../../components/Comment"
@@ -44,6 +45,9 @@ export default function Ordinateur() {
 
     return (
         <>
+            <Head>
+                <title>TI Tech Support - Ordinateurs</title>
+            </Head>
             <h1 className="text-center">Détails de Ordinateur A</h1>
             <div className="my-4 max-w-xl mx-auto">
                 {renderComputer()}

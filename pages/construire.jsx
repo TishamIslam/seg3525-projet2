@@ -1,3 +1,5 @@
+import Head from "next/head"
+
 import ActionButton from "../components/ActionButton"
 import ItemCard from "../components/ItemCard"
 
@@ -10,6 +12,9 @@ export default function BuildComputer() {
     const chosenNVMe = computerComponents['storage'][6]
     return (
         <div className="space-y-6">
+            <Head>
+                <title>TI Tech Support - Construction</title>
+            </Head>
             <h1>Créez un Ordinateur</h1>
             <span>* indique un composante requis</span>
 

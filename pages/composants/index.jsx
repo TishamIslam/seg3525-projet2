@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Head from "next/head"
 
 export default function Components() {
     const componentsList = [
@@ -15,6 +16,9 @@ export default function Components() {
     ]
     return (
         <>
+            <Head>
+                <title>TI Tech Support - Composants</title>
+            </Head>
             <h1 className="text-3xl">Liste de composants offert: </h1>
 
             <ul>
