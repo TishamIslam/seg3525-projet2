@@ -3,9 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-    a {
-        @apply hover:underline;
-    }
 
     h1 {
         @apply text-3xl;
@@ -22,12 +19,47 @@
         @apply ring-offset-3;
         @apply ring-offset-gold-light;
     }
+
+    summary {
+        @apply cursor-pointer;
+    }
+
+    details[open] summary~* {
+        animation: sweep .5s ease-in-out;
+    }
+
+    @keyframes sweep {
+        0% {
+            opacity: 0;
+            margin-top: -10px
+        }
+
+        100% {
+            opacity: 1;
+            margin-top: 0px
+        }
+    }
 }
 
-.next-image-block > span {
-    display: block !important;
-}
+@layer utilities {
 
-.next-image-full > span {
-    height: 100% !important;
+    .gold-link {
+        @apply text-gold;
+        @apply hover:underline;
+        @apply hover:text-gold-light;
+    }
+
+    .green-link {
+        @apply text-green;
+        @apply hover:underline;
+        @apply hover:text-green-light;
+    }
+
+    .next-image-block>span {
+        display: block !important;
+    }
+    
+    .next-image-full>span {
+        height: 100% !important;
+    }
 }

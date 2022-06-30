@@ -19,7 +19,7 @@ export default function Header() {
         { name: 'Information', href: '/info', current: false, icon: faCircleInfo },
         { name: 'Ordinateurs', href: '/ordinateurs', current: false, icon: faComputer },
         { name: 'Créer un ordinateur', href: '/construire', current: false, icon: faScrewdriverWrench },
-        { name: 'Composantes Individuels', href: '/composants', current: false, icon: faTableList },
+        { name: 'Composantes', href: '/composants', current: false, icon: faTableList },
     ]
 
     //sets whichever page is current as current by checking the url
@@ -44,20 +44,26 @@ export default function Header() {
                                     Logo goes here
                                 </div>
                                 <div className="hidden md:block md:ml-6">
-                                    <div className="flex space-x-4">
+                                    <div className="flex space-x-2">
                                         {checkCurrentPage()}
                                         {navigation.map((item) => (
-                                            <Link href={item.href} key={item.name}>
-                                                <a
-                                                    className={classNames(
-                                                        item.current ? 'bg-green-dark text-white' : 'text-gray-200 active:bg-green-dark hover:bg-green-light hover:text-white',
-                                                        'px-3 py-2 rounded-md text-sm font-medium'
-                                                    )}
-                                                    aria-current={item.current ? 'page' : undefined}
-                                                >
-                                                    {item.name}
-                                                </a>
-                                            </Link>
+                                            <div key={item.name}>
+                                                <Link href={item.href} key={item.name}>
+                                                    <a
+                                                        className={classNames(
+                                                            item.current ? 'bg-green-dark text-white' : 'text-gray-200 active:bg-green-dark hover:bg-green-light hover:text-white',
+                                                            'px-3 py-2 rounded-md text-sm font-medium'
+                                                        )}
+                                                        aria-current={item.current ? 'page' : undefined}
+                                                    >
+                                                        <div className='hidden lg:inline-block'>
+                                                            <FontAwesomeIcon icon={item.icon} />
+                                                        </div>
+                                                        {" "}
+                                                        {item.name}
+                                                    </a>
+                                                </Link>
+                                            </div>
                                         ))}
                                     </div>
                                 </div>

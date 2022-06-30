@@ -1,42 +1,42 @@
-
+import Link from "next/link"
+import Head from "next/head"
 
 export default function Components() {
-    const links = ["cpu", "motherboard", "storage", "ram", "fan", "gpu", "case", "power", "os", "accessory"]
-
-    //can be easily put into locale
-    const text = {
-        cpu: "CPU",
-        motherboard: "Carte-mère",
-        storage: "Mémoire",
-        ram: "RAM",
-        fan: "Ventilateurs",
-        gpu: "Cartes Graphiques (GPU)",
-        case: "Boîtiers",
-        power: "Alimentation électrique",
-        os: "Système d'exploitation",
-        accessory: "Accessoires"
-    }
+    const componentsList = [
+        { name: "CPU", link: "cpu", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, saepe veniam recusandae, neque, nisi quisquam aspernatur harum ipsum repellat ullam molestiae quae. Blanditiis tempora eum quam in esse autem ipsum." },
+        { name: "Carte-mère", link: "motherboard", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, saepe veniam recusandae, neque, nisi quisquam aspernatur harum ipsum repellat ullam molestiae quae. Blanditiis tempora eum quam in esse autem ipsum." },
+        { name: "Mémoire", link: "storage", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, saepe veniam recusandae, neque, nisi quisquam aspernatur harum ipsum repellat ullam molestiae quae. Blanditiis tempora eum quam in esse autem ipsum." },
+        { name: "RAM", link: "ram", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, saepe veniam recusandae, neque, nisi quisquam aspernatur harum ipsum repellat ullam molestiae quae. Blanditiis tempora eum quam in esse autem ipsum." },
+        { name: "Ventilateurs", link: "fan", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, saepe veniam recusandae, neque, nisi quisquam aspernatur harum ipsum repellat ullam molestiae quae. Blanditiis tempora eum quam in esse autem ipsum." },
+        { name: "Cartes Graphiques (GPU)", link: "gpu", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, saepe veniam recusandae, neque, nisi quisquam aspernatur harum ipsum repellat ullam molestiae quae. Blanditiis tempora eum quam in esse autem ipsum." },
+        { name: "Boîtiers", link: "case", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, saepe veniam recusandae, neque, nisi quisquam aspernatur harum ipsum repellat ullam molestiae quae. Blanditiis tempora eum quam in esse autem ipsum." },
+        { name: "Alimentation électrique", link: "power", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, saepe veniam recusandae, neque, nisi quisquam aspernatur harum ipsum repellat ullam molestiae quae. Blanditiis tempora eum quam in esse autem ipsum." },
+        { name: "Système d'exploitation", link: "os", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, saepe veniam recusandae, neque, nisi quisquam aspernatur harum ipsum repellat ullam molestiae quae. Blanditiis tempora eum quam in esse autem ipsum." },
+        { name: "Accessoires", link: "accessory", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, saepe veniam recusandae, neque, nisi quisquam aspernatur harum ipsum repellat ullam molestiae quae. Blanditiis tempora eum quam in esse autem ipsum." }
+    ]
     return (
         <>
+            <Head>
+                <title>TI Tech Support - Composants</title>
+            </Head>
             <h1 className="text-3xl">Liste de composants offert: </h1>
-            
-            <ul className="text-green">
-                {links.map((link, index) => {
-                    return (<li className="hover:text-green-light" key={index}><a href={"/composants/" + link}>{text[link]}</a></li>)
+
+            <ul>
+                {componentsList.map((component, index) => {
+                    const [name, link, desc] = [component.name, component.link, component.desc]
+                    return (
+                        <li className="my-4" key={index}>
+                            <Link href={"/composants/" + link}><a className="green-link font-medium text-xl" >{name}</a></Link>
+                            <details>
+                                <summary>Détailes à propos de {name}</summary>
+                                <p>
+                                    {desc}
+                                </p>
+                            </details>
+                        </li>
+                    )
                 })}
             </ul>
-
-                {/* renders like this
-                <li><a href="/composants/cpu">CPU</a></li>
-                <li><a href="/composants/motherboard">Carte-mère</a></li>
-                <li><a href="/composants/storage">Mémoire</a></li>
-                <li><a href="/composants/ram">RAM</a></li>
-                <li><a href="/composants/fan">Ventilateurs </a></li>
-                <li><a href="/composants/gpu">Cartes Graphiques (GPU)</a></li>
-                <li><a href="/composants/case">Boîtiers</a></li>
-                <li><a href="/composants/power">Alimentation électrique</a></li>
-                <li><a href="/composants/os">Système d'exploitation</a></li>
-                <li><a href="/composants/accessory">Accessoires</a></li> */}
         </>
     )
 }

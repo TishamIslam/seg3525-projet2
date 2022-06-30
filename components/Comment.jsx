@@ -6,11 +6,11 @@ import { faChevronCircleDown, faChevronCircleUp } from "@fortawesome/free-solid-
 
 export default function Comment(props) {
     const indent = ['ml-0', 'ml-8', 'ml-16', 'ml-24'] //might implement replies later
-    const [showText, setShowText] = useState(true)
+    const [showText, setShowText] = useState(props?.showInit ?? true)
 
     return (
         <div >
-            <details className={"max-w-sm lg:max-w-md mt-4" + indent[props?.indent ?? 0]} open>
+            <details className={"max-w-sm lg:max-w-md mt-4 " + indent[props?.indent ?? 0]} open>
                 <summary className="p-2 bg-mint flex space-x-2 relative h-20 rounded-t-md border border-mint-dark" onClick={() => {setShowText(!showText)}}>
                     <Image src={profile} width="64px" height="64px" objectFit="cover" />
                     <h3 className="text-xl">{props?.name ?? "Anonyme"}</h3>
