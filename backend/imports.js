@@ -94,11 +94,86 @@ export const fps = [
     [300, 100, 80, 56],
     [240, 80, 60, 36],
     [360, 120, 90, 66],
-    [160, 80, 100, 30],
+    [120, 45, 40, 30],
     [175, 110, 90, 69],
 ]
 
-export const computers = [computer1, computer2, computer3, computer4, computer5]
+export const computers = [
+    {
+        img: computer1,
+        alt: "Computer with red lights",
+        title: "Chui fauchée, voici mon ordi",
+        components: [
+            { name: "gpu", id: 1, },
+            { name: "cpu", id: 1, },
+            { name: "ram", id: [1], },
+            { name: "storage", id: [1, 4], },
+            { name: "motherboard", id: 1, },
+            { name: "power", id: 1, },
+            { name: "fan", id: [1], },
+            { name: "case", id: 1, },
+        ]
+    },
+    {
+        img: computer5,
+        alt: "Very angular computer with red lights",
+        title: "J'avais trop d'argent...",
+        components: [
+            { name: "gpu", id: 1, },
+            { name: "cpu", id: 1, },
+            { name: "ram", id: [1], },
+            { name: "storage", id: [1, 4], },
+            { name: "motherboard", id: 1, },
+            { name: "power", id: 1, },
+            { name: "fan", id: [1], },
+            { name: "case", id: 1, },
+        ]
+    },
+    {
+        img: computer4,
+        alt: "Basic black and grey Dell computer",
+        title: "Entry-level Gaming PC",
+        components: [
+            { name: "gpu", id: 1, },
+            { name: "cpu", id: 1, },
+            { name: "ram", id: [1], },
+            { name: "storage", id: [1, 4], },
+            { name: "motherboard", id: 1, },
+            { name: "power", id: 1, },
+            { name: "fan", id: [1], },
+            { name: "case", id: 1, },
+        ]
+    },
+    {
+        img: computer2,
+        alt: "Stylish RGB computer",
+        title: "Affordable Video Rendering Workstation",
+        components: [
+            { name: "gpu", id: 1, },
+            { name: "cpu", id: 1, },
+            { name: "ram", id: [1], },
+            { name: "storage", id: [1, 4], },
+            { name: "motherboard", id: 1, },
+            { name: "power", id: 1, },
+            { name: "fan", id: [1], },
+            { name: "case", id: 1, },
+        ]
+    },
+    {
+        img: computer3,
+        alt: "Angular Lenovo comptuter",
+        title: "ORdi pour Gaming",
+        components: [
+            { name: "gpu", id: 1, },
+            { name: "cpu", id: 1, },
+            { name: "ram", id: [1], },
+            { name: "storage", id: [1, 4], },
+            { name: "motherboard", id: 1, },
+            { name: "power", id: 1, },
+            { name: "fan", id: [1], },
+            { name: "case", id: 1, },
+        ]
+    },]
 
 export const computerComponents = {
     gpu: [

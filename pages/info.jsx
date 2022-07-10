@@ -1,21 +1,9 @@
 import Head from "next/head"
 
-import Carousel from "../components/Carousel"
-import DisplayCard from "../components/DisplayCard"
+import ComputerCarousel from "../components/ComputerCarousel"
 import EmbeddedYTVid from "../components/EmbeddedYoutubeVideo"
 
-import { computers } from "../backend/imports"
-
 export default function Information() {
-    const cardText = (
-        <div className="p-2">
-            <h4 className="text-lg">Ordinateur A</h4>
-            <p>CPU: Details</p>
-            <p>GPU: Details</p>
-            <p>RAM: Details</p>
-            <p>Mémoire: Details</p>
-        </div>
-    )
     return (
         <>
             <Head>
@@ -27,13 +15,7 @@ export default function Information() {
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis nobis itaque mollitia vel quo,
                 odio rem reiciendis nostrum beatae molestiae sapiente dolores explicabo possimus quos tenetur, aliquam officia id corrupti!</p>
             <h3 className="text-center my-2 text-lg">Je veux un modifier un build déjà créé </h3>
-            <Carousel>
-                {computers.map((value, index) => {
-                    return (
-                        <DisplayCard key={index} text={cardText} imageAlt="alt text" image={value} URL={"ordinateurs/" + index} />
-                    )
-                })}
-            </Carousel>
+            <ComputerCarousel />
 
             <h2 className="my-2">Comment choisir les composantes correctes? </h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
