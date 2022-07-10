@@ -2,7 +2,7 @@ import Head from "next/head"
 
 import Carousel from "../../components/Carousel"
 import DisplayCard from "../../components/DisplayCard"
-import { computers } from "../../items/imports"
+import { computers } from "../../backend/imports"
 
 export default function Ordinateurs() {
     const cardText = (

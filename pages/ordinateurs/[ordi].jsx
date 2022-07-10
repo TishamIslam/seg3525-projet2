@@ -3,7 +3,7 @@ import Head from "next/head"
 
 import DisplayCard from "../../components/DisplayCard"
 import Comment from "../../components/Comment"
-import { computers, games, fps } from "../../items/imports"
+import { computers, games, fps } from "../../backend/imports"
 
 export default function Ordinateur() {
     const router = useRouter()

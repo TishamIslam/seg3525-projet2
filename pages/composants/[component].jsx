@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 
-import { computerComponents } from '../../items/imports'
+import { computerComponents } from '../../backend/imports'
 import ItemCard from '../../components/ItemCard'
 
 export default function Component() {

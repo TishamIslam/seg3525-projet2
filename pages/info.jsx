@@ -4,7 +4,7 @@ import Carousel from "../components/Carousel"
 import DisplayCard from "../components/DisplayCard"
 import EmbeddedYTVid from "../components/EmbeddedYoutubeVideo"
 
-import { computers } from "../items/imports"
+import { computers } from "../backend/imports"
 
 export default function Information() {
     const cardText = (

@@ -4,7 +4,7 @@ import ActionButton from "../components/ActionButton"
 import ItemCard from "../components/ItemCard"
 
 import AMDRyzen9 from "../public/Images/AMDRyzen9.jpg"
-import { computerComponents } from "../items/imports"
+import { computerComponents } from "../backend/imports"
 
 export default function BuildComputer() {
     const chosenOS = computerComponents['os'][0]
