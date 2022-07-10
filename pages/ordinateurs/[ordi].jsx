@@ -5,8 +5,6 @@ import DisplayCard from "../../components/DisplayCard"
 import Comment from "../../components/Comment"
 import { computers, games, fps } from "../../items/imports"
 
-
-
 export default function Ordinateur() {
     const router = useRouter()
     const { ordi } = router.query

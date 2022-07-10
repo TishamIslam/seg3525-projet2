@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
@@ -25,7 +27,11 @@ module.exports = {
       },
       ringOffsetWidth: {
         '3': '3px',
-      }
+      },
+      fontFamily: {
+        'sans': ['Source Sans Pro', ...defaultTheme.fontFamily.sans],
+        'serif': ['Source Serif Pro', ...defaultTheme.fontFamily.serif],
+      },
     },
   },
   plugins: [],
