@@ -108,3 +108,15 @@ export default function BuildComputer() {
         </div>
     )
 }
+
+import { useRouter } from 'next/router'
+
+export async function getStaticProps(context) {
+  const { locale } = useRouter()
+
+  return {
+      props: {
+          locale: locale
+      }
+  }
+}
