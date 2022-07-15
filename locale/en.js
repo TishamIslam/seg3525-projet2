@@ -6,6 +6,12 @@ export default {
     créerUnOrdinateur: 'Build a Computer',
     composantes: 'Components',
 
+    //footer
+    contactez: "Contact us!",
+    appelez: "Give us a call at ",
+    disponible: "we are available from 9:00am to 5:00pm every day.",
+    envoyezCourriel: "You may also send an e-mail to ",
+
     //home page
     notreMission: "Our Mission",
     notreMissionDesc: "We are a small company trying to accomplish great things! We want to offer a service to facilitate the process of building your own computer. To accomplish this, we've created this website and put together as much information as possible to give you the information you need to build a computer that's within your budget, gets the job done and, most importantly, looks great!",
