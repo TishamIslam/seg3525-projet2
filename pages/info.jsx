@@ -30,10 +30,7 @@ export default function Information() {
     )
 }
 
-import { useRouter } from 'next/router'
-
-export async function getStaticProps(context) {
-  const { locale } = useRouter()
+export async function getStaticProps({ locale }) {
 
   return {
       props: {

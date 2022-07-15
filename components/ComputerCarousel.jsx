@@ -1,6 +1,6 @@
 import Carousel from "./Carousel"
 import DisplayCard from "./DisplayCard"
-import { computers, computerComponents  } from "../backend/imports"
+import { computers, computerComponents } from "../backend/imports"
 
 export default function ComputerCarousel() {
     function generateCardText(computer) {
