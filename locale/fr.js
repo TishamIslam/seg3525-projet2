@@ -29,5 +29,26 @@ export default {
     faqQ4: "Question 4",
     faqA4: "Lorem ipsum",
 
+    //info page
+    infoImportantes: "Information importantes",
+    commentDecider: "Comment décider ce que tu veux",
+    commentDeciderDesc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis nobis itaque mollitia vel quo, odio rem reiciendis nostrum beatae molestiae sapiente dolores explicabo possimus quos tenetur, aliquam officia id corrupti!",
+    modifierBuild: "Modifier un build déjà créé",
+    choisirComposants: "Comment choisir les composantes correctes",
+    choisirComposantsDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    commentConstruire: "Comment construire un ordinateur",
+    commentConstruireDesc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, reprehenderit illo ad quas, perspiciatis perferendis officia autem unde soluta explicabo consequuntur atque maiores veniam quisquam quae odio ullam temporibus molestias.",
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
