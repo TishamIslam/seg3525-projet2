@@ -260,6 +260,17 @@ export const computerComponents = {
         { img: keyboard4, alt: "Clavier 4", name: "Clavier 4", price: 100 },
         { img: keyboard5, alt: "Clavier 5", name: "Clavier 5", price: 125 },
     ],
-
-
 }
+
+export const components = [
+    "cpu",
+    "motherboard",
+    "storage",
+    "ram",
+    "fan",
+    "gpu",
+    "case",
+    "psu",
+    "os",
+    "accessory"
+]

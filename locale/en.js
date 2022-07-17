@@ -59,6 +59,13 @@ export default {
     storage: "Storage",
     motherboard: "Motherboard",
     psu: "Power supply",
-    fan: "Fan"
+    fan: "Fans",
+    case: "Computer case",
+    os: "Operating System",
+    accessory: "Accessories",
+
+    listeComposants: "List of offered components: ",
+    detailsAPropos: "Details about ",
+    achetezComposants: "Buy components: ",
 
 }

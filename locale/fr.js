@@ -59,7 +59,14 @@ export default {
     storage: "Mémoire",
     motherboard: "Carte-mère",
     psu: "Alimentation électrique",
-    fan: "Ventilateur"
+    fan: "Ventilateurs",
+    case: "Boîtier",
+    os: "Système d'exploitation",
+    accessory: "Accessoires",
+
+    listeComposants: "Liste de composants offerts: ",
+    detailsAPropos: "Détailes à propos de",
+    achetezComposants: "Achetez des composants: ",
 
 
 
