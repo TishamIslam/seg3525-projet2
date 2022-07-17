@@ -16,11 +16,11 @@ import motherboard3 from "./motherboard/motherboard3.jpg"
 import motherboard4 from "./motherboard/motherboard4.jpg"
 import motherboard5 from "./motherboard/motherboard5.jpg"
 
-import power1 from "./power/power1.jpg"
-import power2 from "./power/power2.jpg"
-import power3 from "./power/power3.jpg"
-import power4 from "./power/power4.jpg"
-import power5 from "./power/power5.jpg"
+import psu1 from "./psu/psu1.jpg"
+import psu2 from "./psu/psu2.jpg"
+import psu3 from "./psu/psu3.jpg"
+import psu4 from "./psu/psu4.jpg"
+import psu5 from "./psu/psu5.jpg"
 
 import hdd1 from "./storage/hdd1.jpg"
 import hdd2 from "./storage/hdd2.jpg"
@@ -109,7 +109,7 @@ export const computers = [
             { name: "ram", id: [1], },
             { name: "storage", id: [1, 4], },
             { name: "motherboard", id: 1, },
-            { name: "power", id: 1, },
+            { name: "psu", id: 1, },
             { name: "fan", id: [1], },
             { name: "case", id: 1, },
         ]
@@ -124,7 +124,7 @@ export const computers = [
             { name: "ram", id: [1], },
             { name: "storage", id: [1, 4], },
             { name: "motherboard", id: 1, },
-            { name: "power", id: 1, },
+            { name: "psu", id: 1, },
             { name: "fan", id: [1], },
             { name: "case", id: 1, },
         ]
@@ -139,7 +139,7 @@ export const computers = [
             { name: "ram", id: [1], },
             { name: "storage", id: [1, 4], },
             { name: "motherboard", id: 1, },
-            { name: "power", id: 1, },
+            { name: "psu", id: 1, },
             { name: "fan", id: [1], },
             { name: "case", id: 1, },
         ]
@@ -154,7 +154,7 @@ export const computers = [
             { name: "ram", id: [1], },
             { name: "storage", id: [1, 4], },
             { name: "motherboard", id: 1, },
-            { name: "power", id: 1, },
+            { name: "psu", id: 1, },
             { name: "fan", id: [1], },
             { name: "case", id: 1, },
         ]
@@ -169,7 +169,7 @@ export const computers = [
             { name: "ram", id: [1], },
             { name: "storage", id: [1, 4], },
             { name: "motherboard", id: 1, },
-            { name: "power", id: 1, },
+            { name: "psu", id: 1, },
             { name: "fan", id: [1], },
             { name: "case", id: 1, },
         ]
@@ -197,12 +197,12 @@ export const computerComponents = {
         { img: motherboard4, alt: "Carte-mère 4", name: "Carte-mère 4", price: 150 },
         { img: motherboard5, alt: "Carte-mère 5", name: "Carte-mère 5", price: 175 },
     ],
-    power: [
-        { img: power1, alt: "Alimentation électrique 1", name: "Alimentation électrique 1", price: 100 },
-        { img: power2, alt: "Alimentation électrique 2", name: "Alimentation électrique 2", price: 50 },
-        { img: power3, alt: "Alimentation électrique 3", name: "Alimentation électrique 3", price: 60 },
-        { img: power4, alt: "Alimentation électrique 4", name: "Alimentation électrique 4", price: 75 },
-        { img: power5, alt: "Alimentation électrique 5", name: "Alimentation électrique 5", price: 125 },
+    psu: [
+        { img: psu1, alt: "Alimentation électrique 1", name: "Alimentation électrique 1", price: 100 },
+        { img: psu2, alt: "Alimentation électrique 2", name: "Alimentation électrique 2", price: 50 },
+        { img: psu3, alt: "Alimentation électrique 3", name: "Alimentation électrique 3", price: 60 },
+        { img: psu4, alt: "Alimentation électrique 4", name: "Alimentation électrique 4", price: 75 },
+        { img: psu5, alt: "Alimentation électrique 5", name: "Alimentation électrique 5", price: 125 },
     ],
     storage: [
         { img: hdd1, alt: "Seagate Barracude 2TB", name: "Seagate Barracude 2TB", price: 65 },
