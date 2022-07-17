@@ -23,7 +23,7 @@ export default function Components({ locale, components }) {
                             <details>
                                 <summary>{t.detailsAPropos} {t[component]}</summary>
                                 <p>
-                                    {t.lorem}
+                                    {t[component + "Desc"]}
                                 </p>
                             </details>
                         </li>

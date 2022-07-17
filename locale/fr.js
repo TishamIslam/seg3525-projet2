@@ -43,7 +43,7 @@ export default {
 
     //computers page
     ordinateursDesc: "Ici tu peux voir les ordinateurs que des autres personnes ont créés, puis téléchargé ici pour les montrer aux autres, comme inspiration, pour obtenir des commentaires, etc.",
-    voirOrdinateurs: "Voir les ordinateurs des autres (cliquez pour voir des détailes): ",
+    voirOrdinateurs: "Voir les ordinateurs des autres (cliquer pour voir des détailes): ",
     ipsPour: "IPS pour ",
     orDetails: "Détails de l'ordinateur ",
     jeuxDetails: "Détails de performance sur un nombre de jeux vidéos",
@@ -53,7 +53,7 @@ export default {
     commentaireExemple: "J'aime le build! Je trouve que...",
 
     //components
-    cpu: "CPU",
+    cpu: "UCT/CPU",
     gpu: "GPU",
     ram: "RAM",
     storage: "Mémoire",
@@ -64,9 +64,21 @@ export default {
     os: "Système d'exploitation",
     accessory: "Accessoires",
 
+    cpuDesc: "L'unité centrale de traitement (UCT, ou CPU en anglais) est le composant de l'ordinateur chargé d'interpréter et d'exécuter la plupart des commandes provenant des autres matériels et logiciels de l'ordinateur. ",
+    gpuDesc: "Les ordinateurs de base ne font que restituer des images et des animations telles que celles que vous regardez en ce moment. Cependant, les ordinateurs plus avancés, tels que les PC de jeu, offrent des GPU plus puissants qui sont capables d'accélérer le rendu des graphiques 3D. Si un ordinateur équipé d'un GPU de base est capable d'afficher des graphiques 3D, un GPU dédié peut les traiter beaucoup plus rapidement et avec des niveaux de détail bien plus élevés. ",
+    ramDesc: "La mémoire vive (RAM), est le matériel physique à l'intérieur d'un ordinateur qui stocke temporairement des données, servant de mémoire vive à l'ordinateur. Une mémoire vive supplémentaire permet à un ordinateur de travailler avec plus d'informations en même temps, ce qui a généralement un effet considérable sur les performances totales du système. ",
+    storageDesc: "Il existe plusieurs types de stockage à long terme pour les ordinateurs, le plus souvent des disques durs, des disques SSD et des disques SSD NVMe. Leur mode de fonctionnement est quelque peu différent, ce qui a un impact sur leur prix, leur vitesse et leurs capacités de stockage maximales. Le disque dur offre généralement une capacité de stockage supérieure à un prix inférieur, mais c'est aussi le plus lent du lot. Les disques SSD offrent des capacités de stockage et des vitesses élevées, mais sont également plus chers. Les SSD NVMe sont incroyablement rapides, mais ils sont les plus chers et ont la capacité de stockage maximale la plus faible. L'idéal serait d'utiliser le disque dur pour stocker les fichiers auxquels vous n'accédez pas très souvent, et d'utiliser le disque dur SSD ou NVMe SSD pour stocker et exécuter des programmes.",
+    motherboardDesc: "Une carte mère est l'une des parties les plus essentielles d'un système informatique. Elle réunit un grand nombre des composants essentiels d'un ordinateur, notamment l'unité centrale de traitement (UCT), la mémoire et les connecteurs pour les périphériques d'entrée et de sortie. Une carte mère de meilleure qualité est moins sujette aux erreurs, peut avoir des fonctionnalités supplémentaires comme le wifi intégré, et peut rendre votre ordinateur globalement meilleur.",
+    psuDesc: "Le bloc d'alimentation est l'élément matériel qui convertit l'énergie fournie par la prise de courant en énergie utilisable par les nombreux composants du boîtier de l'ordinateur. Il convertit le courant alternatif de votre prise murale en une forme continue d'énergie appelée courant continu dont les composants de l'ordinateur ont besoin. Elle régule également la surchauffe en contrôlant la tension, qui peut changer automatiquement ou manuellement selon l'alimentation. L'alimentation est une pièce cruciale car, sans elle, le reste du matériel interne ne peut pas fonctionner.",
+    fanDesc: "Les ventilateurs sont installés dans votre ordinateur pour l'empêcher de surchauffer. Différents ventilateurs peuvent refroidir votre ordinateur plus efficacement et plus silencieusement. Les ventilateurs jouent également un rôle important dans l'esthétique de votre ordinateur, de nombreux ventilateurs étant aujourd'hui dotés de fonctions RVB.",
+    caseDesc: "Un boîtier d'ordinateur contient toutes les pièces de votre ordinateur. Les boîtiers existent en différentes tailles, ce qui peut avoir une incidence sur les cartes mères, les GPU et les autres composants qui peuvent y être logés. Les boîtiers sont également équipés de ports externes permettant de connecter des périphériques tels que la souris et le clavier. Certains boîtiers sont également équipés de ventilateurs intégrés.",
+    osDesc: "Un système d'exploitation (SE) est un programme puissant et généralement étendu qui contrôle et gère le matériel et les autres logiciels d'un ordinateur. Tous les ordinateurs et les appareils de type informatique ont besoin de SEs, y compris votre ordinateur portable, votre tablette, votre ordinateur de bureau, votre smartphone, votre smartwatch et votre routeur. Il est recommandé d'installer Windows 10 si vous n'avez aucune idée de quelle SE à installer, mais vous pouvez également essayer des distributions Linux orientées vers les débutants, comme Linux Mint, si vous souhaitez en apprendre davantage sur Linux et comment personnaliser votre SE.",
+    accessoryDesc: "Il existe un certain nombre d'accessoires, également appelés périphériques, que vous pouvez utiliser pour faire fonctionner votre ordinateur. Il s'agit notamment d'écrans d'ordinateur, de claviers, de souris, de microphones, de haut-parleurs, de casques, etc. Actuellement, nous ne proposons pas beaucoup d'accessoires et de services liés aux accessoires. Nous ne pouvons donc pas garantir automatiquement que les accessoires que vous ajoutez à votre ordinateur seront compatibles avec les pièces que vous avez choisies, bien que les chances que cela se produise soient faibles. ",
+
     listeComposants: "Liste de composants offerts: ",
     detailsAPropos: "Détailes à propos de",
     achetezComposants: "Achetez des composants: ",
+    prix: "Prix",
 
 
 

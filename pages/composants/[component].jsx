@@ -14,7 +14,7 @@ export default function Component({ locale, component}) {
         return component.map((obj, index) => {
             return (
                 <ItemCard key={index} image={obj.img} imageAlt={obj.alt} button={true}
-                    plus={true} text={<><p>{obj.name}</p><p>Prix: ${obj.price}</p></>} />
+                    plus={true} text={<><p>{obj.name}</p><p>{t.prix}: ${obj.price}</p></>} />
             )
         })
     }
