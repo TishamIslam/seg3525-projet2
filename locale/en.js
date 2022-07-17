@@ -44,5 +44,21 @@ export default {
     //computers page
     ordinateursDesc: "Here you can see the computers that other people have created, then uploaded here to show them to others, as inspiration, to get feedback, etc.",
     voirOrdinateurs: "See the computers of others (click to see details):",
+    ipsPour: "FPS for ",
+    orDetails: "Details for the computer ",
+    jeuxDetails: "Performance details on a number of video games",
+    sectionCommentaires: "Comments section",
+    ajouterCommentaire: "Add a comment",
+    nom: "Name",
+    commentaireExemple: "I love the build! I think that...",
+
+    //components
+    cpu: "CPU",
+    gpu: "GPU",
+    ram: "RAM",
+    storage: "Storage",
+    motherboard: "Motherboard",
+    psu: "Power supply",
+    fan: "Fan"
 
 }

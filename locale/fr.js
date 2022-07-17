@@ -44,8 +44,22 @@ export default {
     //computers page
     ordinateursDesc: "Ici tu peux voir les ordinateurs que des autres personnes ont créés, puis téléchargé ici pour les montrer aux autres, comme inspiration, pour obtenir des commentaires, etc.",
     voirOrdinateurs: "Voir les ordinateurs des autres (cliquez pour voir des détailes): ",
+    ipsPour: "IPS pour ",
+    orDetails: "Détails de l'ordinateur ",
+    jeuxDetails: "Détails de performance sur un nombre de jeux vidéos",
+    sectionCommentaires: "Section de commentaires",
+    ajouterCommentaire: "Ajouter un commentaire",
+    nom: "Nom",
+    commentaireExemple: "J'aime le build! Je trouve que...",
 
-
+    //components
+    cpu: "CPU",
+    gpu: "GPU",
+    ram: "RAM",
+    storage: "Mémoire",
+    motherboard: "Carte-mère",
+    psu: "Alimentation électrique",
+    fan: "Ventilateur"
 
 
 
