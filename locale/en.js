@@ -1,4 +1,6 @@
 export default {
+    lorem: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eum quaerat blanditiis corporis eveniet officia repellendus, et quae voluptas eos sapiente ad soluta adipisci a officiis totam impedit maiores nostrum?",
+
     //nav
     accueil: 'Home',
     information: 'Information',
@@ -39,5 +41,8 @@ export default {
     commentConstruire: "How to build a PC",
     commentConstruireDesc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, reprehenderit illo ad quas, perspiciatis perferendis officia autem unde soluta explicabo consequuntur atque maiores veniam quisquam quae odio ullam temporibus molestias.",
 
+    //computers page
+    ordinateursDesc: "Here you can see the computers that other people have created, then uploaded here to show them to others, as inspiration, to get feedback, etc.",
+    voirOrdinateurs: "See the computers of others (click to see details):",
 
 }
