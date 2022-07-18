@@ -177,25 +177,25 @@ export const computers = [
 
 export const computerComponents = {
     gpu: [
-        { img: gpu1, alt: "GPU 1", name: "GPU 1", price: 2500 },
-        { img: gpu2, alt: "GPU 2", name: "GPU 2", price: 1500 },
-        { img: gpu3, alt: "GPU 3", name: "GPU 3", price: 3000 },
-        { img: gpu4, alt: "GPU 4", name: "GPU 4", price: 1750 },
-        { img: gpu5, alt: "GPU 5", name: "GPU 5", price: 1000 },
+        { img: gpu1, alt: "GPU 1", name: "GPU 1", price: 2500, gamePower: 212 },
+        { img: gpu2, alt: "GPU 2", name: "GPU 2", price: 1500, gamePower: 136 },
+        { img: gpu3, alt: "GPU 3", name: "GPU 3", price: 3000, gamePower: 255 },
+        { img: gpu4, alt: "GPU 4", name: "GPU 4", price: 1750, gamePower: 177 },
+        { img: gpu5, alt: "GPU 5", name: "GPU 5", price: 1000, gamePower: 60 },
     ],
     cpu: [
-        { img: cpu1, alt: "CPU 1", name: "CPU 1", price: 2500 },
-        { img: cpu2, alt: "CPU 2", name: "CPU 2", price: 1500 },
-        { img: cpu3, alt: "CPU 3", name: "CPU 3", price: 3000 },
-        { img: cpu4, alt: "CPU 4", name: "CPU 4", price: 1750 },
-        { img: cpu5, alt: "CPU 5", name: "CPU 5", price: 1000 },
+        { img: cpu1, alt: "CPU 1", name: "CPU 1", price: 2500, gamePower: 59 },
+        { img: cpu2, alt: "CPU 2", name: "CPU 2", price: 1500, gamePower: 24 },
+        { img: cpu3, alt: "CPU 3", name: "CPU 3", price: 3000, gamePower: 66 },
+        { img: cpu4, alt: "CPU 4", name: "CPU 4", price: 1750, gamePower: 32 },
+        { img: cpu5, alt: "CPU 5", name: "CPU 5", price: 1000, gamePower: 16 },
     ],
     motherboard: [
-        { img: motherboard1, alt: "Carte-mère 1", name: "Carte-mère 1", price: 200 },
-        { img: motherboard2, alt: "Carte-mère 2", name: "Carte-mère 2", price: 250 },
-        { img: motherboard3, alt: "Carte-mère 3", name: "Carte-mère 3", price: 300 },
-        { img: motherboard4, alt: "Carte-mère 4", name: "Carte-mère 4", price: 150 },
-        { img: motherboard5, alt: "Carte-mère 5", name: "Carte-mère 5", price: 175 },
+        { img: motherboard1, alt: "Carte-mère 1", name: "Carte-mère 1", price: 200, gamePower: 5 },
+        { img: motherboard2, alt: "Carte-mère 2", name: "Carte-mère 2", price: 250, gamePower: 8 },
+        { img: motherboard3, alt: "Carte-mère 3", name: "Carte-mère 3", price: 300, gamePower: 12 },
+        { img: motherboard4, alt: "Carte-mère 4", name: "Carte-mère 4", price: 150, gamePower: 1 },
+        { img: motherboard5, alt: "Carte-mère 5", name: "Carte-mère 5", price: 175, gamePower: 2 },
     ],
     psu: [
         { img: psu1, alt: "Alimentation électrique 1", name: "Alimentation électrique 1", price: 100 },
@@ -274,3 +274,46 @@ export const components = [
     "os",
     "accessory"
 ]
+
+export const componentMetadata = {
+    cpu: {
+        required: true,
+        multiple: false,
+    },
+    motherboard: {
+        required: true,
+        multiple: false,
+    },
+    storage: {
+        required: true,
+        multiple: true,
+    },
+    ram: {
+        required: true,
+        multiple: true,
+    },
+    fan: {
+        required: false,
+        multiple: true,
+    },
+    gpu: {
+        required: false,
+        multiple: false,
+    },
+    case: {
+        required: true,
+        multiple: false,
+    },
+    psu: {
+        required: true,
+        multiple: false,
+    },
+    os: {
+        required: false,
+        multiple: false,
+    },
+    accessory: {
+        required: false,
+        multiple: true,
+    },
+}

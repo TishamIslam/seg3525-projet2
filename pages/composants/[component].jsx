@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import Head from 'next/head'
+import Link from 'next/link'
 
 import { computerComponents, components } from '../../backend/imports'
 import ItemCard from '../../components/ItemCard'
@@ -9,12 +10,20 @@ import fr from "../../locale/fr"
 
 export default function Component({ locale, component}) {
     const t = locale === 'en' ? en : fr
+    const { query } = useRouter()
 
     function renderComponents() {
         return component.map((obj, index) => {
             return (
-                <ItemCard key={index} image={obj.img} imageAlt={obj.alt} button={true}
-                    plus={true} text={<><p>{obj.name}</p><p>{t.prix}: ${obj.price}</p></>} />
+                <ItemCard
+                    key={index}
+                    image={obj.img}
+                    imageAlt={obj.alt}
+                    button={true}
+                    plus={true}
+                    text={<><p>{obj.name}</p><p>{t.prix}: ${obj.price}</p></>}
+                    link={{ pathname:"/construire/", query: { componentType: query.component, componentID: index }}} 
+                    />
             )
         })
     }
@@ -24,8 +33,20 @@ export default function Component({ locale, component}) {
             <Head>
                 <title>TI Tech Support - {t.composantes}</title>
             </Head>
-            <h1>{t.achetezComposants}</h1>
-            <div className="space-y-4 my-4">
+            {query?.return 
+            ? <>
+                <div className='flex justify-between pb-6'>
+                    <h1>{t.achetezComposants}</h1>
+                    <button className='p-2 bg-green hover:bg-green-light gold-link rounded-md'>
+                        <Link href="/construire">
+                            <a>{t.retourner}</a>
+                        </Link>
+                    </button>
+                </div>
+            </>
+            : <h1>{t.achetezComposants}</h1>
+            }
+            <div className="space-y-8 my-4 mt-8">
                 {renderComponents()}
             </div>
         </>
@@ -37,7 +58,7 @@ export async function getStaticProps({ locale, params }) {
     return {
         props: {
             locale: locale,
-            component: computerComponents[params.component]
+            component: computerComponents[params.component],
         }
     }
 }

@@ -52,6 +52,25 @@ export default {
     nom: "Name",
     commentaireExemple: "I love the build! I think that...",
 
+    //construction page
+    cpuAjouter: "Add a CPU",
+    gpuAjouter: "Add a GPU",
+    ramAjouter: "Add RAM",
+    storageAjouter: "Add Storage",
+    motherboardAjouter: "Add a Motherboard",
+    psuAjouter: "Add a Power supply",
+    fanAjouter: "Add Fans",
+    caseAjouter: "Add a Computer case",
+    osAjouter: "Add an Operating System",
+    accessoryAjouter: "Add Accessories",
+    
+    choisirDesComposants: "Pick the parts that you want",
+    erreurPasAssezComposants: "Error: You haven't chosen enough components to perform an analysis on video games",
+    choisi: "Chosen ",
+    estimationJeux: "An estimation of performance on a number of video games",
+    coutTotale: "Total price",
+    achetezMaintenant: "Buy now!",
+
     //components
     cpu: "CPU",
     gpu: "GPU",
@@ -79,5 +98,7 @@ export default {
     detailsAPropos: "Details about ",
     achetezComposants: "Buy components: ",
     prix: "Price",
+    retourner: "Return",
+    indiqueRequis: "indicates a required component",
 
 }

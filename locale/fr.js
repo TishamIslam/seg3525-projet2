@@ -52,6 +52,25 @@ export default {
     nom: "Nom",
     commentaireExemple: "J'aime le build! Je trouve que...",
 
+    //construction page
+    cpuAjouter: "Ajouter un UCT/CPU",
+    gpuAjouter: "Ajouter un GPU",
+    ramAjouter: "Ajouter du RAM",
+    storageAjouter: "Ajouter du mémoire",
+    motherboardAjouter: "Ajouter une carte-mère",
+    psuAjouter: "Ajouter un alimentation électrique",
+    fanAjouter: "Ajouter des ventilateurs",
+    caseAjouter: "Ajouter un boîtier",
+    osAjouter: "Ajouter une Système d'exploitation",
+    accessoryAjouter: "Ajouter des accessoires",
+    
+    choisirDesComposants: "Choisir les parties désirées",
+    erreurPasAssezComposants: "Erreur: Tu n'a pas choisi assez de composants pour voir un analyse de performance sur jeux vidéos",
+    choisi: "choisi",
+    estimationJeux: "Une estimation de performance sur quelque jeux vidéos",
+    coutTotale: "Coût totale",
+    achetezMaintenant: "Achetez maintenant!",
+
     //components
     cpu: "UCT/CPU",
     gpu: "GPU",
@@ -79,13 +98,7 @@ export default {
     detailsAPropos: "Détailes à propos de",
     achetezComposants: "Achetez des composants: ",
     prix: "Prix",
-
-
-
-
-
-
-
-
+    retourner: "Retourner",
+    indiqueRequis: "indique un composante requis"
 
 }
