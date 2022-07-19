@@ -13,11 +13,12 @@ import en from "../locale/en"
 import fr from "../locale/fr"
 
 export default function BuildComputer({ locale, components, cMetadata }) {
-    let totalPrice = 0;
-    let totalGamePower = 0;
     const t = locale === 'en' ? en : fr
     const { query } = useRouter()
+    let totalPrice = 0
+    let totalGamePower = 0
     const unchosenRequiredComponents = []
+    const [noComponents, setNoComponents] = useState(true)
 
     const [userCPU, setUserCPU] = useState([])
     const [userMotherboard, setUserMotherboard] = useState([])
@@ -29,7 +30,6 @@ export default function BuildComputer({ locale, components, cMetadata }) {
     const [userPSU, setUserPSU] = useState([])
     const [userOS, setUserOS] = useState([])
     const [userAccessory, setUserAccessory] = useState([])
-
     const user = {
         cpu: userCPU,
         motherboard: userMotherboard,
@@ -42,7 +42,6 @@ export default function BuildComputer({ locale, components, cMetadata }) {
         os: userOS,
         accessory: userAccessory,
     }
-
     const userSetters = {
         cpu: setUserCPU,
         motherboard: setUserMotherboard,
@@ -55,26 +54,30 @@ export default function BuildComputer({ locale, components, cMetadata }) {
         os: setUserOS,
         accessory: setUserAccessory,
     }
-
-    //initialize user data when the page is loaded
-    useEffect(() => {
+    useEffect(() => { //initialize user data when the page is loaded
         Object.entries(userSetters).forEach(([componentType, setter]) => {
             let savedComponent = JSON.parse(window.localStorage.getItem(componentType)) ?? []
-
             if (query?.componentType === componentType && query?.componentID) {
                 const cID = parseInt(query.componentID)
-                if (cMetadata[componentType].multiple) {
-                    savedComponent.push(cID)
-                } else {
+                savedComponent.push(cID)
+                if (!cMetadata[componentType].multiple) {
                     savedComponent = [cID]
                 }
                 window.localStorage.setItem(componentType, JSON.stringify(savedComponent))
             }
+            setNoComponents(savedComponent.length > 0)
             setter(savedComponent) //setter? I don't even know 'er
         })
     }, [])
 
+    useEffect(() => { //resets values that rely on the various components that are chosen
+        totalGamePower = 0
+        totalPrice = 0
+        unchosenRequiredComponents.length = 0
+    })
+
     function removeUserComponent(componentType, removeID) {
+        let newNoComponentsValue = true
         userSetters[componentType]((prevArr) => {
             let removed = false;
             const newArr = prevArr.filter(componentID => {
@@ -85,8 +88,12 @@ export default function BuildComputer({ locale, components, cMetadata }) {
                 return true
             })
             window.localStorage.setItem(componentType, JSON.stringify(newArr))
+            if (newArr.length > 0) {
+                newNoComponentsValue = false
+            }
             return newArr;
         })
+        setNoComponents(newNoComponentsValue)
     }
 
     function renderGameFPS() {
@@ -102,12 +109,11 @@ export default function BuildComputer({ locale, components, cMetadata }) {
         )
     }
 
-    //resets values that rely on the various components that are chosen
-    useEffect(() => {
-        totalGamePower = 0
-        totalPrice = 0
-        unchosenRequiredComponents.length = 0
-    })
+    function handleBuy() {
+        if (noComponents) {
+            alert("No components")
+        }
+    }
 
     return (
         <div className="space-y-6">
@@ -117,7 +123,6 @@ export default function BuildComputer({ locale, components, cMetadata }) {
             <h1>{t.créerUnOrdinateur}</h1>
             <span>* {t.indiqueRequis}</span>
             <h2>{t.choisirDesComposants}</h2>
-            {/* {resetAccumulatedValues()} */}
             {Object.entries(user).map(([componentType, chosenComponents]) => {
                 return (
                     <div key={componentType} id={componentType} className="bg-mint p-2 py-3 rounded-lg">
@@ -163,21 +168,21 @@ export default function BuildComputer({ locale, components, cMetadata }) {
                         }
                     })
                 }
-                {unchosenRequiredComponents.length != 0
+                {unchosenRequiredComponents.length > 0
                     ? <>
-                        <h2>{t.erreurPasAssezComposants}</h2>
+                        <h2 className="font-bold text-crimson">{t.erreurPasAssezComposants}</h2>
                         <ul>
-                        {unchosenRequiredComponents.map((comp, index) => {
-                            return (
-                                <li key={index}>
-                                    <Link href={"/construire#" + comp}>
-                                        <a className="green-link text-lg">
-                                            {t[comp + "Ajouter"]}
-                                        </a>
-                                    </Link>
-                                </li>
-                            )
-                        })}
+                            {unchosenRequiredComponents.map((comp, index) => {
+                                return (
+                                    <li key={index}>
+                                        <Link href={"/construire#" + comp}>
+                                            <a className="green-link text-lg">
+                                                {t[comp + "Ajouter"]}
+                                            </a>
+                                        </Link>
+                                    </li>
+                                )
+                            })}
                         </ul>
                     </>
                     : <>
@@ -191,7 +196,7 @@ export default function BuildComputer({ locale, components, cMetadata }) {
             <hr className="border border-green" />
             <div className="p-2 py-8 grid grid-cols-1 gap-2 md:flex justify-between items-center">
                 <span className="text-xl md:text-2xl text-center md:text-left">{t.coutTotale}: {totalPrice} $</span>
-                <button className="p-2 md:px-8 md:w-40 md:text-lg rounded-md bg-green hover:bg-green-light text-white">
+                <button className="p-2 md:px-8 md:w-60 md:text-lg rounded-md bg-green hover:bg-green-light text-white" onClick={handleBuy}>
                     {t.achetezMaintenant}
                 </button>
             </div>

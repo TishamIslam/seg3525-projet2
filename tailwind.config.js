@@ -23,6 +23,9 @@ module.exports = {
           light: '#CFFEDC',
           dark: '#7DDB98',
           DEFAULT: '#A0EBB5'
+        },
+        crimson: {
+          DEFAULT: '#980000'
         }
       },
       ringOffsetWidth: {
