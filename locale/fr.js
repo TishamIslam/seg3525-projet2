@@ -70,6 +70,8 @@ export default {
     estimationJeux: "Une estimation de performance sur quelque jeux vidéos",
     coutTotale: "Coût totale",
     achetezMaintenant: "Achetez maintenant!",
+    nulComposants: "Erreur: Il n'y a pas de composants choisi.",
+    avertissementComposantsRequis: "Avertissement: Il y a des composants requis qui ne sont pas choisis. Cependant, tu peux ignorer ce message et continuer si tu veux acheter les composants tu as choisi au moment.",
 
     //components
     cpu: "UCT/CPU",

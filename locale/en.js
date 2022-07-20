@@ -70,6 +70,8 @@ export default {
     estimationJeux: "An estimation of performance on a number of video games",
     coutTotale: "Total price",
     achetezMaintenant: "Buy now!",
+    nulComposants: "Error: There are no selected components",
+    avertissementComposantsRequis: "Warning: You haven't chosen some required components. If this was intentional (due to having the components already or the like), please ignore this message.",
 
     //components
     cpu: "CPU",
