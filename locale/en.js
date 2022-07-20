@@ -103,4 +103,7 @@ export default {
     retourner: "Return",
     indiqueRequis: "indicates a required component",
 
+    //404 page
+    header404: "Error 404: Page not Found",
+    desc404: "Sorry, we couldn't find the page that you're looking for. Please contact us if this error persists.",
 }

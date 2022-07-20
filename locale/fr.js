@@ -101,6 +101,9 @@ export default {
     achetezComposants: "Achetez des composants: ",
     prix: "Prix",
     retourner: "Retourner",
-    indiqueRequis: "indique un composante requis"
+    indiqueRequis: "indique un composante requis",
 
+    //404 page
+    header404: "Erreur 404: Page n'est pas trouvée",
+    desc404: "Désolé, on ne peut pas trouver le page que tu cherches. S'il vous plaît, contacter nous si cet erreur se persiste.",
 }
