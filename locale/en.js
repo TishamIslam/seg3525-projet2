@@ -73,7 +73,7 @@ export default {
     nulComposants: "Error: There are no selected components",
     avertissementComposantsRequis: "Warning: You haven't chosen some required components. If this was intentional (due to having the components already or the like), please ignore this message.",
 
-    //components
+    //components page
     cpu: "CPU",
     gpu: "GPU",
     ram: "RAM",
@@ -102,6 +102,18 @@ export default {
     prix: "Price",
     retourner: "Return",
     indiqueRequis: "indicates a required component",
+
+    //Components details
+    capacite: "Capacity",
+    grandeur:"Size",
+    bruit: "Noise",
+    coeurs: "Cores",
+    vitesse: "Speed",
+    ventilPasInclus: "Fans not included",
+    ventilInclus: "Fans included",
+    tauxRefraiche: "Refresh rate",
+    sansFil: "Wireless",
+    courbe: "Curved Screen",
 
     //404 page
     header404: "Error 404: Page not Found",

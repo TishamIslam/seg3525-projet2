@@ -1,3 +1,6 @@
+import en from "../locale/en"
+import fr from "../locale/fr"
+
 import cpu1 from "./cpu/cpu1.jpg"
 import cpu2 from "./cpu/cpu2.jpg"
 import cpu3 from "./cpu/cpu3.jpg"
@@ -175,91 +178,95 @@ export const computers = [
         ]
     },]
 
-export const computerComponents = {
-    gpu: [
-        { img: gpu1, name: "ROG Strix", price: 2500, details: ["VRAM: 8 GB, 65 MHz"], gamePower: 212 },
-        { img: gpu2, name: "GeForce 1060", details: ["VRAM: 4 GB, 60 MHz"], price: 1500, gamePower: 136 },
-        { img: gpu3, name: "ASUS GeForce RTX 3070", price: 3500, details: ["VRAM: 16 GB, 120 MHz"], gamePower: 289 },
-        { img: gpu4, name: "ASUS GeForce GTX 1050Ti", price: 1750, details: ["VRAM: 4 GB, 80 MHz"], gamePower: 177 },
-        { img: gpu5, name: "MSI GeForce RTX 3060Ti", price: 3000, details: ["VRAM: 12 GB, 40 MHz"], gamePower: 255 },
-    ],
-    cpu: [
-        { img: cpu1, name: "Intel Core i7-10700F", price: 330, details: ["8 Cores, 4.8 GHz"], gamePower: 45 },
-        { img: cpu2, name: "AMD Ryzen 7 5800X3D", price: 580, details: ["8 Cores, 4.5 GHz"],gamePower: 66 },
-        { img: cpu3, name: "AMD RYZEN 5 5600", price: 250, details: ["6 Cores, 3.5 GHz"],gamePower: 32 },
-        { img: cpu4, name: "Intel Core i5-10400", price: 200, details: ["6 Cores, @2.7 GHz"],gamePower: 22 },
-        { img: cpu5, name: "Intel Core i9-11900K", price: 500, details: ["8 Cores @5.3 GHz"],gamePower: 59 },
-    ],
-    motherboard: [
-        { img: motherboard1, name: "ASUS ROG Strix B450-F", price: 150, details: ["Ports: 2 USB 3.0, 2 USB 2.0"], gamePower: 5 },
-        { img: motherboard2, name: "ASUS Prime Z590-A LGA", price: 250, details: ["Ports: 3 USB 3.0, 2 USB 2.0, Ethernet"], gamePower: 8 },
-        { img: motherboard3, name: "ASUS ROG Strix B560-A ", price: 200, details: ["Ports: 5 USB 3.0, Ethernet"], gamePower: 12 },
-        { img: motherboard4, name: "MSI MPG Z490", price: 170, details: ["Ports: 1 USB 3.0, 3 USB 2.0"], gamePower: 1 },
-        { img: motherboard5, name: "MSI MAG B450", price: 145, details: ["Ports: 2 USB 3.0, 2 USB 2.0, Ethernet"], gamePower: 2 },
-    ],
-    psu: [
-        { img: psu1, name: "EVGA 750 GA", details: ["750 W"], price: 100 },
-        { img: psu2, name: "ThermalTake Smart", details: ["500 W"], price: 50 },
-        { img: psu3, name: "Corsair VS600", details: ["600 W"], price: 60 },
-        { img: psu4, name: "EVGA 600", details: ["600 W"], price: 75 },
-        { img: psu5, name: "Corsair CS650F RGB", details: ["650 W"], price: 125 },
-    ],
-    storage: [
-        { img: hdd1, name: "Seagate Barracuda", details: ["Size: 2 TB", "R/W: 70 MB/s"], price: 65, gamePower: -10 },
-        { img: hdd2, name: "WD Blue", details: ["Size: 4 TB", "R/W: 80 MB/s"], price: 125, gamePower: -10 },
-        { img: hdd3, name: "WD Black", details: ["Size: 8 TB", "R/W: 80 MB/s"], price: 250, gamePower: -10 },
-        { img: ssd1, name: "WD Blue Sata SSD", details: ["Size: 1 TB", "R/W: 700 MB/s"], price: 125, gamePower: 10 },
-        { img: ssd2, name: "Crucial SSD", details: ["Size: 2 TB", "R/W: 800 MB/s"], price: 150, gamePower: 10 },
-        { img: ssd3, name: "SP SSD", details: ["Size: 512 GB", "R/W: 750 MB/s"], price: 100, gamePower: 10 },
-        { img: nvme1, name: "Samsung 980 NVMe SSD", details: ["Size: 1 TB", "R/W: 9800 MB/s"], price: 200, gamePower: 25 },
-        { img: nvme2, name: "Samsung 980 Pro NVMe SSD", details: ["Size: 2 TB", "R/W: 11000 MB/s"], price: 350, gamePower: 40 },
-        { img: nvme3, name: "WD Black SN770 NVMe SSD", details: ["Size: 512 GB", "R/W: 9000 MB/s"], price: 250, gamePower: 20 },
-    ],
-    ram: [
-        { img: ram1, name: "Corsair Vengeance x2", details: ["Size: 8 GB x 2", "DDR4 3600 MHz"], price: 100, gamePower: 25 },
-        { img: ram2, name: "X Power x2", details: ["Size: 8 GB x 2", "DDR4 3200 MHz"], price: 175, gamePower: 20 },
-        { img: ram3, name: "Crucial CL40 x2", details: ["Size: 32 GB x 2", "DDR5 4800 MHz"], price: 425, gamePower: 50 },
-        { img: ram4, name: "XPG D60G", details: ["Size: 8 GB x 2", "DDR4 3200 MHz"], price: 85, gamePower: 20 },
-        { img: ram5, name: "Corsair Vengeance C16 x2", details: ["Size: 16 GB x 2", "DDR4 3200 MHz"], price: 170, gamePower: 30 },
-    ],
-    fan: [
-        { img: fan1, name: "upHere NT12043-5  x5", details: ["Noise: 25 dB", "CFM: 300"], price: 100 },
-        { img: fan2, name: "Artic F12 x5", details: ["Noise: 32 dB", "CFM: 200"], price: 50 },
-        { img: fan3, name: "Noctua NF-P12", details: ["Noise: 27 dB", "CFM: 235"], price: 20 },
-        { img: fan4, name: "Cooler Master MF120 RGB x3", details: ["Noise: 24 dB", "CFM: 270"], price: 55 },
-        { img: fan5, name: "Corsair CO-9050072-WW x5", details: ["Noise: 14 dB", "CFM: 290"], price: 125 },
-    ],
-    case: [
-        { img: case1, name: "Vetroo K1 Pangolin",  details: ["Fans not included"], price: 250 },
-        { img: case2, name: "KEDIERS",  details: ["Fans included (x7)"], price: 200 },
-        { img: case3, name: "Razer NXT250",  details: ["Fans not included"], price: 150 },
-        { img: case4, name: "Cooler Master MasterBox MB311L",  details: ["Fans included (2)"], price: 100 },
-        { img: case5, name: "Cooler Master MasterBox TD500", details: ["Fans included (3)"],  price: 125 },
-    ],
-    os: [
-        { img: windows1, name: "Windows 10 Home", price: 150 },
-        { img: windows2, name: "Windows 10 Pro", price: 250 },
-        { img: windows3, name: "Windows 10 OEM", price: 100 },
-        { img: windows4, name: "Windows 11 Pro", price: 100 },
-        { img: windows5, name: "Windows 11 Home", price: 125 },
-    ],
-    accessory: [
-        { img: monitor1, name: "Samsung T350 Series",details: ["Size: 24\" / 60cm @1920/1080p", "Refresh: 75Hz"],  price: 180 },
-        { img: monitor2, name: "LG 27EA430V-B",details: ["Size: 27\" / 68cm @1920/1080p", "Refresh: 75Hz"],  price: 200 },
-        { img: monitor3, name: "LG 22BK430H-B",details: ["Size: 22\" / 55cm @1920/1080p", "Refresh: 75Hz"],  price: 160 },
-        { img: monitor4, name: "ViewSonic VA2247-MH ",details: ["Size: 22\" / cm @1920/1080p", "Refresh: 75Hz"],  price: 160 },
-        { img: monitor5, name: "MSI Curved Gaming Monitor",details: ["Size: 24\" / 60cm @1920/1080p", "Refresh: 144Hz", "Curved"],  price: 210 },
-        { img: mouse1, name: "VersionTech RGB Mouse", details: [], price: 50 },
-        { img: mouse2, name: "Hotlife Wireless Mouse", details: ["Wireless"], price: 20 },
-        { img: mouse3, name: "Logitech Wireless Mouse", details: ["Wireless"], price: 35 },
-        { img: mouse4, name: "Anker Ergonomic Mouse", details: [], price: 60 },
-        { img: mouse5, name: "Logitech G502", details: [], price: 80 },
-        { img: keyboard1, name: "SteelSeries Apex RGB", details: ["Size: 80% (TKL)"], price: 150 },
-        { img: keyboard2, name: "MageGee MK-Box", details: ["Size: 60%"], price: 250 },
-        { img: keyboard3, name: "Ltvystore Keyboard", details: ["Size: 60%"], price: 100 },
-        { img: keyboard4, name: "OMOTON Wireless Keyboard", details: ["Size: 90%", "Wireless"], price: 100 },
-        { img: keyboard5,  name: "YoChic Keyboard", details: ["Size: 100%"], price: 125 },
-    ],
+export function getComputerComponents(locale) {
+    const t = locale === 'en' ? en : fr
+
+    return {
+        gpu: [
+            { img: gpu1, name: "ROG Strix", price: 2500, details: ["VRAM: 8 GB, 65 MHz"], gamePower: 212 },
+            { img: gpu2, name: "GeForce 1060", details: ["VRAM: 4 GB, 60 MHz"], price: 1500, gamePower: 136 },
+            { img: gpu3, name: "ASUS GeForce RTX 3070", price: 3500, details: ["VRAM: 16 GB, 120 MHz"], gamePower: 289 },
+            { img: gpu4, name: "ASUS GeForce GTX 1050Ti", price: 1750, details: ["VRAM: 4 GB, 80 MHz"], gamePower: 177 },
+            { img: gpu5, name: "MSI GeForce RTX 3060Ti", price: 3000, details: ["VRAM: 12 GB, 40 MHz"], gamePower: 255 },
+        ],
+        cpu: [
+            { img: cpu1, name: "Intel Core i7-10700F", price: 330, details: [t.coeurs + ": 8", t.vitesse + ": 4.8 GHz"], gamePower: 45 },
+            { img: cpu2, name: "AMD Ryzen 7 5800X3D", price: 580, details: [t.coeurs + ": 8", t.vitesse + ": 4.5 GHz"], gamePower: 66 },
+            { img: cpu3, name: "AMD RYZEN 5 5600", price: 250, details: [t.coeurs + ": 6", t.vitesse + ": 3.5 GHz"], gamePower: 32 },
+            { img: cpu4, name: "Intel Core i5-10400", price: 200, details: [t.coeurs + ": 6", t.vitesse + ": @2.7 GHz"], gamePower: 22 },
+            { img: cpu5, name: "Intel Core i9-11900K", price: 500, details: [t.coeurs + ": 8", t.vitesse + ": @5.3 GHz"], gamePower: 59 },
+        ],
+        motherboard: [
+            { img: motherboard1, name: "ASUS ROG Strix B450-F", price: 150, details: ["Ports: 2 USB 3.0, 2 USB 2.0"], gamePower: 5 },
+            { img: motherboard2, name: "ASUS Prime Z590-A LGA", price: 250, details: ["Ports: 3 USB 3.0, 2 USB 2.0, Ethernet"], gamePower: 8 },
+            { img: motherboard3, name: "ASUS ROG Strix B560-A ", price: 200, details: ["Ports: 5 USB 3.0, Ethernet"], gamePower: 12 },
+            { img: motherboard4, name: "MSI MPG Z490", price: 170, details: ["Ports: 1 USB 3.0, 3 USB 2.0"], gamePower: 1 },
+            { img: motherboard5, name: "MSI MAG B450", price: 145, details: ["Ports: 2 USB 3.0, 2 USB 2.0, Ethernet"], gamePower: 2 },
+        ],
+        psu: [
+            { img: psu1, name: "EVGA 750 GA", details: ["750 W"], price: 100 },
+            { img: psu2, name: "ThermalTake Smart", details: ["500 W"], price: 50 },
+            { img: psu3, name: "Corsair VS600", details: ["600 W"], price: 60 },
+            { img: psu4, name: "EVGA 600", details: ["600 W"], price: 75 },
+            { img: psu5, name: "Corsair CS650F RGB", details: ["650 W"], price: 125 },
+        ],
+        storage: [
+            { img: hdd1, name: "Seagate Barracuda", details: [t.capacite + ": 2 TB", "R/W: 70 MB/s"], price: 65, gamePower: -10 },
+            { img: hdd2, name: "WD Blue", details: [t.capacite + ": 4 TB", "R/W: 80 MB/s"], price: 125, gamePower: -10 },
+            { img: hdd3, name: "WD Black", details: [t.capacite + ": 8 TB", "R/W: 80 MB/s"], price: 250, gamePower: -10 },
+            { img: ssd1, name: "WD Blue Sata SSD", details: [t.capacite + ": 1 TB", "R/W: 700 MB/s"], price: 125, gamePower: 10 },
+            { img: ssd2, name: "Crucial SSD", details: [t.capacite + ": 2 TB", "R/W: 800 MB/s"], price: 150, gamePower: 10 },
+            { img: ssd3, name: "SP SSD", details: [t.capacite + ": 512 GB", "R/W: 750 MB/s"], price: 100, gamePower: 10 },
+            { img: nvme1, name: "Samsung 980 NVMe SSD", details: [t.capacite + ": 1 TB", "R/W: 9800 MB/s"], price: 200, gamePower: 25 },
+            { img: nvme2, name: "Samsung 980 Pro NVMe SSD", details: [t.capacite + ": 2 TB", "R/W: 11000 MB/s"], price: 350, gamePower: 40 },
+            { img: nvme3, name: "WD Black SN770 NVMe SSD", details: [t.capacite + ": 512 GB", "R/W: 9000 MB/s"], price: 250, gamePower: 20 },
+        ],
+        ram: [
+            { img: ram1, name: "Corsair Vengeance x2", details: [t.capacite + ": 8 GB x 2", "DDR4 3600 MHz"], price: 100, gamePower: 25 },
+            { img: ram2, name: "X Power x2", details: [t.capacite + ": 8 GB x 2", "DDR4 3200 MHz"], price: 175, gamePower: 20 },
+            { img: ram3, name: "Crucial CL40 x2", details: [t.capacite + ": 32 GB x 2", "DDR5 4800 MHz"], price: 425, gamePower: 50 },
+            { img: ram4, name: "XPG D60G", details: [t.capacite + ": 8 GB x 2", "DDR4 3200 MHz"], price: 85, gamePower: 20 },
+            { img: ram5, name: "Corsair Vengeance C16 x2", details: [t.capacite + ": 16 GB x 2", "DDR4 3200 MHz"], price: 170, gamePower: 30 },
+        ],
+        fan: [
+            { img: fan1, name: "upHere NT12043-5  x5", details: [t.bruit + ": 25 dB", "CFM: 300"], price: 100 },
+            { img: fan2, name: "Artic F12 x5", details: [t.bruit + ": 32 dB", "CFM: 200"], price: 50 },
+            { img: fan3, name: "Noctua NF-P12", details: [t.bruit + ": 27 dB", "CFM: 235"], price: 20 },
+            { img: fan4, name: "Cooler Master MF120 RGB x3", details: [t.bruit + ": 24 dB", "CFM: 270"], price: 55 },
+            { img: fan5, name: "Corsair CO-9050072-WW x5", details: [t.bruit + ": 14 dB", "CFM: 290"], price: 125 },
+        ],
+        case: [
+            { img: case1, name: "Vetroo K1 Pangolin", details: [t.ventilPasInclus], price: 250 },
+            { img: case2, name: "KEDIERS", details: [t.ventilInclus + "  (x7)"], price: 200 },
+            { img: case3, name: "Razer NXT250", details: [t.ventilPasInclus], price: 150 },
+            { img: case4, name: "Cooler Master MasterBox MB311L", details: [t.ventilInclus + "  (2)"], price: 100 },
+            { img: case5, name: "Cooler Master MasterBox TD500", details: [t.ventilInclus + "  (3)"], price: 125 },
+        ],
+        os: [
+            { img: windows1, name: "Windows 10 Home", price: 150 },
+            { img: windows2, name: "Windows 10 Pro", price: 250 },
+            { img: windows3, name: "Windows 10 OEM", price: 100 },
+            { img: windows4, name: "Windows 11 Pro", price: 100 },
+            { img: windows5, name: "Windows 11 Home", price: 125 },
+        ],
+        accessory: [
+            { img: monitor1, name: "Samsung T350 Series", details: [t.grandeur + ": 24\" / 60cm @1920/1080p", t.tauxRefraiche + " : 75Hz"], price: 180 },
+            { img: monitor2, name: "LG 27EA430V-B", details: [t.grandeur + ": 27\" / 68cm @1920/1080p", t.tauxRefraiche + " : 75Hz"], price: 200 },
+            { img: monitor3, name: "LG 22BK430H-B", details: [t.grandeur + ": 22\" / 55cm @1920/1080p", t.tauxRefraiche + " : 75Hz"], price: 160 },
+            { img: monitor4, name: "ViewSonic VA2247-MH ", details: [t.grandeur + ": 22\" / cm @1920/1080p", t.tauxRefraiche + " : 75Hz"], price: 160 },
+            { img: monitor5, name: "MSI Curved Gaming Monitor", details: [t.grandeur + ": 24\" / 60cm @1920/1080p", t.tauxRefraiche + " : 144Hz", t.courbe], price: 210 },
+            { img: mouse1, name: "VersionTech RGB Mouse", details: [], price: 50 },
+            { img: mouse2, name: "Hotlife Wireless Mouse", details: [t.sansFil], price: 20 },
+            { img: mouse3, name: "Logitech Wireless Mouse", details: [t.sansFil], price: 35 },
+            { img: mouse4, name: "Anker Ergonomic Mouse", details: [], price: 60 },
+            { img: mouse5, name: "Logitech G502", details: [], price: 80 },
+            { img: keyboard1, name: "SteelSeries Apex RGB", details: [t.grandeur + ": 80% (TKL)"], price: 150 },
+            { img: keyboard2, name: "MageGee MK-Box", details: [t.grandeur + ": 60%"], price: 250 },
+            { img: keyboard3, name: "Ltvystore Keyboard", details: [t.grandeur + ": 60%"], price: 100 },
+            { img: keyboard4, name: "OMOTON Wireless Keyboard", details: [t.grandeur + ": 90%", t.sansFil], price: 100 },
+            { img: keyboard5, name: "YoChic Keyboard", details: [t.grandeur + ": 100%"], price: 125 },
+        ],
+    }
 }
 
 export const components = [

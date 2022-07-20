@@ -2,7 +2,7 @@ import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Link from 'next/link'
 
-import { computerComponents, components } from '../../backend/imports'
+import { getComputerComponents, components } from '../../backend/imports'
 import ItemCard from '../../components/ItemCard'
 
 import en from "../../locale/en"
@@ -13,15 +13,13 @@ export default function Component({ locale, component}) {
     const { query } = useRouter()
 
     function renderComponents() {
-        return component.map((obj, index) => {
+        return component.map((component, index) => {
             return (
                 <ItemCard
                     key={index}
-                    image={obj.img}
-                    imageAlt={obj.alt}
+                    component={component}
                     button={true}
                     plus={true}
-                    text={<><p>{obj.name}</p><p>{t.prix}: ${obj.price}</p></>}
                     link={{ pathname:"/construire/", query: { componentType: query.component, componentID: index }}} 
                     />
             )
@@ -58,7 +56,7 @@ export async function getStaticProps({ locale, params }) {
     return {
         props: {
             locale: locale,
-            component: computerComponents[params.component],
+            component: getComputerComponents(locale)[params.component],
         }
     }
 }

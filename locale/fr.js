@@ -73,7 +73,7 @@ export default {
     nulComposants: "Erreur: Il n'y a pas de composants choisi.",
     avertissementComposantsRequis: "Avertissement: Il y a des composants requis qui ne sont pas choisis. Cependant, tu peux ignorer ce message et continuer si tu veux acheter les composants tu as choisi au moment.",
 
-    //components
+    //components page
     cpu: "UCT/CPU",
     gpu: "GPU",
     ram: "RAM",
@@ -103,7 +103,20 @@ export default {
     retourner: "Retourner",
     indiqueRequis: "indique un composante requis",
 
+    //Components details
+    capacite: "Capacité",
+    grandeur:"Grandeur",
+    bruit: "Bruit",
+    coeurs: "Coeurs",
+    vitesse: "Vitesse",
+    ventilPasInclus: "Ventilateurs pas inclus",
+    ventilInclus: "Ventilateurs inclus",
+    tauxRefraiche: "Taux de rafraîchissement",
+    sansFil: "Sans-fil",
+    courbe: "Écran Courbé",
+
     //404 page
     header404: "Erreur 404: Page n'est pas trouvée",
     desc404: "Désolé, on ne peut pas trouver le page que tu cherches. S'il vous plaît, contacter nous si cet erreur se persiste.",
+    
 }

@@ -7,7 +7,7 @@ import DisplayCard from "../components/DisplayCard"
 import ActionButton from "../components/ActionButton"
 import ItemCard from "../components/ItemCard"
 
-import { computerComponents, componentMetadata, games } from "../backend/imports"
+import { getComputerComponents, componentMetadata, games } from "../backend/imports"
 
 import en from "../locale/en"
 import fr from "../locale/fr"
@@ -120,7 +120,7 @@ export default function BuildComputer({ locale, components, cMetadata }) {
     function handleBuy(event) {
         event.preventDefault()
         let noComponents = true
-        Object.entries(user).forEach(([cType, component])=> {
+        Object.entries(user).forEach(([cType, component]) => {
             if (component.length > 0) {
                 noComponents = false
             }
@@ -166,11 +166,10 @@ export default function BuildComputer({ locale, components, cMetadata }) {
                                         return (
                                             <ItemCard
                                                 key={index}
-                                                image={chosenComponent.img}
-                                                imageAlt={chosenComponent.alt}
+                                                component={chosenComponent}
                                                 button={true}
                                                 onClick={() => removeUserComponent(componentType, componentID)}
-                                                text={(<div><p>{chosenComponent.name}</p><p>{t.prix}: {chosenComponent.price} $</p></div>)} />
+                                            />
                                         )
                                     })
                                     }
@@ -187,7 +186,7 @@ export default function BuildComputer({ locale, components, cMetadata }) {
                     Object.entries(user).forEach(([componentType, chosenComponents]) => {
                         if (cMetadata[componentType].required && chosenComponents.length == 0 && unchosenRequiredComponents.indexOf(componentType) == -1) {
                             unchosenRequiredComponents.push(componentType)
-                        } 
+                        }
                     })
                 }
                 {unchosenRequiredComponents.length > 0
@@ -231,7 +230,7 @@ export async function getStaticProps({ locale }) {
     return {
         props: {
             locale: locale,
-            components: computerComponents,
+            components: getComputerComponents(locale),
             cMetadata: componentMetadata,
         }
     }
