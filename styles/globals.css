@@ -4,12 +4,26 @@
 
 @layer base {
 
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-serif;
+        @apply font-semibold;
+    }
+
     h1 {
-        @apply text-3xl;
+        @apply text-4xl;
+        @apply font-bold;
     }
 
     h2 {
+        @apply text-2xl;
+    }
+
+    h3 {
         @apply text-xl;
+    }
+
+    h4 {
+        @apply text-lg;
     }
 
     *:focus-visible {

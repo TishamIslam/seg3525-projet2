@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
@@ -21,11 +23,18 @@ module.exports = {
           light: '#CFFEDC',
           dark: '#7DDB98',
           DEFAULT: '#A0EBB5'
+        },
+        crimson: {
+          DEFAULT: '#980000'
         }
       },
       ringOffsetWidth: {
         '3': '3px',
-      }
+      },
+      fontFamily: {
+        'sans': ['Source Sans Pro', ...defaultTheme.fontFamily.sans],
+        'serif': ['Source Serif Pro', ...defaultTheme.fontFamily.serif],
+      },
     },
   },
   plugins: [],

@@ -1,36 +1,29 @@
 import Link from "next/link"
 import Head from "next/head"
 
-export default function Components() {
-    const componentsList = [
-        { name: "CPU", link: "cpu", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, saepe veniam recusandae, neque, nisi quisquam aspernatur harum ipsum repellat ullam molestiae quae. Blanditiis tempora eum quam in esse autem ipsum." },
-        { name: "Carte-mère", link: "motherboard", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, saepe veniam recusandae, neque, nisi quisquam aspernatur harum ipsum repellat ullam molestiae quae. Blanditiis tempora eum quam in esse autem ipsum." },
-        { name: "Mémoire", link: "storage", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, saepe veniam recusandae, neque, nisi quisquam aspernatur harum ipsum repellat ullam molestiae quae. Blanditiis tempora eum quam in esse autem ipsum." },
-        { name: "RAM", link: "ram", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, saepe veniam recusandae, neque, nisi quisquam aspernatur harum ipsum repellat ullam molestiae quae. Blanditiis tempora eum quam in esse autem ipsum." },
-        { name: "Ventilateurs", link: "fan", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, saepe veniam recusandae, neque, nisi quisquam aspernatur harum ipsum repellat ullam molestiae quae. Blanditiis tempora eum quam in esse autem ipsum." },
-        { name: "Cartes Graphiques (GPU)", link: "gpu", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, saepe veniam recusandae, neque, nisi quisquam aspernatur harum ipsum repellat ullam molestiae quae. Blanditiis tempora eum quam in esse autem ipsum." },
-        { name: "Boîtiers", link: "case", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, saepe veniam recusandae, neque, nisi quisquam aspernatur harum ipsum repellat ullam molestiae quae. Blanditiis tempora eum quam in esse autem ipsum." },
-        { name: "Alimentation électrique", link: "power", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, saepe veniam recusandae, neque, nisi quisquam aspernatur harum ipsum repellat ullam molestiae quae. Blanditiis tempora eum quam in esse autem ipsum." },
-        { name: "Système d'exploitation", link: "os", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, saepe veniam recusandae, neque, nisi quisquam aspernatur harum ipsum repellat ullam molestiae quae. Blanditiis tempora eum quam in esse autem ipsum." },
-        { name: "Accessoires", link: "accessory", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, saepe veniam recusandae, neque, nisi quisquam aspernatur harum ipsum repellat ullam molestiae quae. Blanditiis tempora eum quam in esse autem ipsum." }
-    ]
+import { components } from "../../backend/imports"
+
+import en from "../../locale/en"
+import fr from "../../locale/fr"
+
+export default function Components({ locale, components }) {
+    const t = locale === 'en' ? en : fr
     return (
         <>
             <Head>
-                <title>TI Tech Support - Composants</title>
+                <title>TI Tech Support - {t.composantes}</title>
             </Head>
-            <h1 className="text-3xl">Liste de composants offert: </h1>
+            <h1 className="text-3xl">{t.listeComposants}</h1>
 
             <ul>
-                {componentsList.map((component, index) => {
-                    const [name, link, desc] = [component.name, component.link, component.desc]
+                {components.map((component, index) => {
                     return (
                         <li className="my-4" key={index}>
-                            <Link href={"/composants/" + link}><a className="green-link font-medium text-xl" >{name}</a></Link>
+                            <Link href={"/composants/" + component}><a className="green-link font-medium text-xl" >{t[component]}</a></Link>
                             <details>
-                                <summary>Détailes à propos de {name}</summary>
+                                <summary>{t.detailsAPropos} {t[component]}</summary>
                                 <p>
-                                    {desc}
+                                    {t[component + "Desc"]}
                                 </p>
                             </details>
                         </li>
@@ -39,4 +32,14 @@ export default function Components() {
             </ul>
         </>
     )
+}
+
+export async function getStaticProps({ locale }) {
+
+  return {
+      props: {
+          locale: locale,
+          components: components,
+      }
+  }
 }
