@@ -75,12 +75,6 @@ import monitor3 from "./accessory/monitor3.jpg"
 import monitor4 from "./accessory/monitor4.jpg"
 import monitor5 from "./accessory/monitor5.jpg"
 
-import computer1 from "../public/Images/computer1.jpeg"
-import computer2 from "../public/Images/computer2.png"
-import computer3 from "../public/Images/computer3.jpeg"
-import computer4 from "../public/Images/computer4.webp"
-import computer5 from "../public/Images/computer5.jpg"
-
 import valorant from "../public/Images/Valorant.jpg"
 import witcher from "../public/Images/witcher3.jpeg"
 import metro from "../public/Images/metro-exodus.webp"
@@ -93,89 +87,76 @@ export const games = [
     { name: "Cyberpunk 2077", img: cyberpunk },
 ]
 
-export const fps = [
-    [300, 100, 80, 56],
-    [240, 80, 60, 36],
-    [360, 120, 90, 66],
-    [120, 45, 40, 30],
-    [175, 110, 90, 69],
-]
-
 export const computers = [
     {
-        img: computer1,
-        alt: "Computer with red lights",
+        alt: "Ordinateur noir avec un écran à maille et deux ventilateurs lumineux en couleurs arc-en-ciel (RGB)",
         title: "Chui fauchée, voici mon ordi",
-        components: [
-            { name: "gpu", id: 1, },
-            { name: "cpu", id: 1, },
-            { name: "ram", id: [1], },
-            { name: "storage", id: [1, 4], },
-            { name: "motherboard", id: 1, },
-            { name: "psu", id: 1, },
-            { name: "fan", id: [1], },
-            { name: "case", id: 1, },
-        ]
+        components: {
+            gpu: 1,
+            cpu: 2,
+            ram: [3],
+            storage: [0],
+            motherboard: 4,
+            psu: 1,
+            fan: [1],
+            case: 3,
+        }
     },
     {
-        img: computer5,
-        alt: "Very angular computer with red lights",
+        alt: "Ordinateur qui regarde un peu comme un pangolin",
         title: "J'avais trop d'argent...",
-        components: [
-            { name: "gpu", id: 1, },
-            { name: "cpu", id: 1, },
-            { name: "ram", id: [1], },
-            { name: "storage", id: [1, 4], },
-            { name: "motherboard", id: 1, },
-            { name: "psu", id: 1, },
-            { name: "fan", id: [1], },
-            { name: "case", id: 1, },
-        ]
+        components: {
+            gpu: 2,
+            cpu: 1,
+            ram: [2, 2],
+            storage: [2, 4, 7],
+            motherboard: 1,
+            psu: 0,
+            fan: [4, 2],
+            case: 0,
+        }
     },
     {
-        img: computer4,
-        alt: "Basic black and grey Dell computer",
+        alt: "Ordinateur noir avec un écran à maille et des ventilateurs lumineux en couleurs arc-en-ciel (RGB)",
         title: "Entry-level Gaming PC",
-        components: [
-            { name: "gpu", id: 1, },
-            { name: "cpu", id: 1, },
-            { name: "ram", id: [1], },
-            { name: "storage", id: [1, 4], },
-            { name: "motherboard", id: 1, },
-            { name: "psu", id: 1, },
-            { name: "fan", id: [1], },
-            { name: "case", id: 1, },
-        ]
+        components: {
+            gpu: 1,
+            cpu: 4,
+            ram: [1],
+            storage: [6],
+            motherboard: 2,
+            psu: 4,
+            fan: [0],
+            case: 4,
+        }
     },
     {
-        img: computer2,
-        alt: "Stylish RGB computer",
+        alt: "Ordinateur en forme hexagonale avec plusieurs ventilateurs lumineux de couleur jaune-vert",
         title: "Affordable Video Rendering Workstation",
-        components: [
-            { name: "gpu", id: 1, },
-            { name: "cpu", id: 1, },
-            { name: "ram", id: [1], },
-            { name: "storage", id: [1, 4], },
-            { name: "motherboard", id: 1, },
-            { name: "psu", id: 1, },
-            { name: "fan", id: [1], },
-            { name: "case", id: 1, },
-        ]
+        components: {
+            gpu: 3,
+            cpu: 1,
+            ram: [1],
+            storage: [2,5],
+            motherboard: 4,
+            psu: 3,
+            fan: [2, 2, 2],
+            case: 1,
+        }
     },
     {
-        img: computer3,
-        alt: "Angular Lenovo comptuter",
+        alt: "Ordinateur avec des lumières verts",
         title: "ORdi pour Gaming",
-        components: [
-            { name: "gpu", id: 1, },
-            { name: "cpu", id: 1, },
-            { name: "ram", id: [1], },
-            { name: "storage", id: [1, 4], },
-            { name: "motherboard", id: 1, },
-            { name: "psu", id: 1, },
-            { name: "fan", id: [1], },
-            { name: "case", id: 1, },
-        ]
+        components: {
+            gpu: 2,
+            cpu: 3,
+            ram: [4, 4],
+            storage: [1, 4],
+            motherboard: 3,
+            psu: 3,
+            fan: [4],
+            case: 2,
+        }
     },]
 
 export function getComputerComponents(locale) {
@@ -183,11 +164,11 @@ export function getComputerComponents(locale) {
 
     return {
         gpu: [
-            { img: gpu1, name: "ROG Strix", price: 2500, details: ["VRAM: 8 GB, 65 MHz"], gamePower: 212 },
-            { img: gpu2, name: "GeForce 1060", details: ["VRAM: 4 GB, 60 MHz"], price: 1500, gamePower: 136 },
-            { img: gpu3, name: "ASUS GeForce RTX 3070", price: 3500, details: ["VRAM: 16 GB, 120 MHz"], gamePower: 289 },
-            { img: gpu4, name: "ASUS GeForce GTX 1050Ti", price: 1750, details: ["VRAM: 4 GB, 80 MHz"], gamePower: 177 },
-            { img: gpu5, name: "MSI GeForce RTX 3060Ti", price: 3000, details: ["VRAM: 12 GB, 40 MHz"], gamePower: 255 },
+            { img: gpu1, name: "ROG Strix 8 GB", price: 560, details: ["VRAM: 8 GB, 65 MHz"], gamePower: 212 },
+            { img: gpu2, name: "GeForce 1060 4 GB", price: 230, details: ["VRAM: 4 GB, 60 MHz"], gamePower: 176 },
+            { img: gpu3, name: "ASUS GeForce RTX 3070 16 GB", price: 1000, details: ["VRAM: 16 GB, 120 MHz"], gamePower: 289 },
+            { img: gpu4, name: "ASUS GeForce GTX 1050Ti 4 GB", price: 200, details: ["VRAM: 4 GB, 80 MHz"], gamePower: 156 },
+            { img: gpu5, name: "MSI GeForce RTX 3060Ti 12 GB", price: 900, details: ["VRAM: 12 GB, 40 MHz"], gamePower: 255 },
         ],
         cpu: [
             { img: cpu1, name: "Intel Core i7-10700F", price: 330, details: [t.coeurs + ": 8", t.vitesse + ": 4.8 GHz"], gamePower: 45 },
@@ -204,32 +185,32 @@ export function getComputerComponents(locale) {
             { img: motherboard5, name: "MSI MAG B450", price: 145, details: ["Ports: 2 USB 3.0, 2 USB 2.0, Ethernet"], gamePower: 2 },
         ],
         psu: [
-            { img: psu1, name: "EVGA 750 GA", details: ["750 W"], price: 100 },
-            { img: psu2, name: "ThermalTake Smart", details: ["500 W"], price: 50 },
-            { img: psu3, name: "Corsair VS600", details: ["600 W"], price: 60 },
-            { img: psu4, name: "EVGA 600", details: ["600 W"], price: 75 },
-            { img: psu5, name: "Corsair CS650F RGB", details: ["650 W"], price: 125 },
+            { img: psu1, name: "EVGA 750GA 750 W", details: ["750 W"], price: 100 },
+            { img: psu2, name: "ThermalTake Smart 500 W", details: ["500 W"], price: 50 },
+            { img: psu3, name: "Corsair VS600 600 W", details: ["600 W"], price: 60 },
+            { img: psu4, name: "EVGA 600 W", details: ["600 W"], price: 75 },
+            { img: psu5, name: "Corsair CS650F RGB 650 W", details: ["650 W"], price: 125 },
         ],
         storage: [
-            { img: hdd1, name: "Seagate Barracuda", details: [t.capacite + ": 2 TB", "R/W: 70 MB/s"], price: 65, gamePower: -10 },
-            { img: hdd2, name: "WD Blue", details: [t.capacite + ": 4 TB", "R/W: 80 MB/s"], price: 125, gamePower: -10 },
-            { img: hdd3, name: "WD Black", details: [t.capacite + ": 8 TB", "R/W: 80 MB/s"], price: 250, gamePower: -10 },
-            { img: ssd1, name: "WD Blue Sata SSD", details: [t.capacite + ": 1 TB", "R/W: 700 MB/s"], price: 125, gamePower: 10 },
-            { img: ssd2, name: "Crucial SSD", details: [t.capacite + ": 2 TB", "R/W: 800 MB/s"], price: 150, gamePower: 10 },
-            { img: ssd3, name: "SP SSD", details: [t.capacite + ": 512 GB", "R/W: 750 MB/s"], price: 100, gamePower: 10 },
-            { img: nvme1, name: "Samsung 980 NVMe SSD", details: [t.capacite + ": 1 TB", "R/W: 9800 MB/s"], price: 200, gamePower: 25 },
-            { img: nvme2, name: "Samsung 980 Pro NVMe SSD", details: [t.capacite + ": 2 TB", "R/W: 11000 MB/s"], price: 350, gamePower: 40 },
-            { img: nvme3, name: "WD Black SN770 NVMe SSD", details: [t.capacite + ": 512 GB", "R/W: 9000 MB/s"], price: 250, gamePower: 20 },
+            { img: hdd1, name: "Seagate Barracuda 2 TB", details: [t.capacite + ": 2 TB", "R/W: 70 MB/s"], price: 65, gamePower: -10 },
+            { img: hdd2, name: "WD Blue 4 TB", details: [t.capacite + ": 4 TB", "R/W: 80 MB/s"], price: 125, gamePower: -10 },
+            { img: hdd3, name: "WD Black 8 TB", details: [t.capacite + ": 8 TB", "R/W: 80 MB/s"], price: 250, gamePower: -10 },
+            { img: ssd1, name: "WD Blue Sata SSD 1 TB", details: [t.capacite + ": 1 TB", "R/W: 700 MB/s"], price: 125, gamePower: 10 },
+            { img: ssd2, name: "Crucial SSD 2 TB", details: [t.capacite + ": 2 TB", "R/W: 800 MB/s"], price: 150, gamePower: 10 },
+            { img: ssd3, name: "SP SSD 512 GB", details: [t.capacite + ": 512 GB", "R/W: 750 MB/s"], price: 100, gamePower: 10 },
+            { img: nvme1, name: "Samsung 980 NVMe SSD 1 TB", details: [t.capacite + ": 1 TB", "R/W: 9800 MB/s"], price: 200, gamePower: 25 },
+            { img: nvme2, name: "Samsung 980 Pro NVMe SSD 2 TB", details: [t.capacite + ": 2 TB", "R/W: 11000 MB/s"], price: 350, gamePower: 40 },
+            { img: nvme3, name: "WD Black SN770 NVMe SSD 512 GB", details: [t.capacite + ": 512 GB", "R/W: 9000 MB/s"], price: 250, gamePower: 20 },
         ],
         ram: [
-            { img: ram1, name: "Corsair Vengeance x2", details: [t.capacite + ": 8 GB x 2", "DDR4 3600 MHz"], price: 100, gamePower: 25 },
-            { img: ram2, name: "X Power x2", details: [t.capacite + ": 8 GB x 2", "DDR4 3200 MHz"], price: 175, gamePower: 20 },
-            { img: ram3, name: "Crucial CL40 x2", details: [t.capacite + ": 32 GB x 2", "DDR5 4800 MHz"], price: 425, gamePower: 50 },
-            { img: ram4, name: "XPG D60G", details: [t.capacite + ": 8 GB x 2", "DDR4 3200 MHz"], price: 85, gamePower: 20 },
-            { img: ram5, name: "Corsair Vengeance C16 x2", details: [t.capacite + ": 16 GB x 2", "DDR4 3200 MHz"], price: 170, gamePower: 30 },
+            { img: ram1, name: "Corsair Vengeance 8 GB x2", details: [t.capacite + ": 8 GB x 2", "DDR4 3600 MHz"], price: 100, gamePower: 25 },
+            { img: ram2, name: "X Power 8 GB x2", details: [t.capacite + ": 8 GB x 2", "DDR4 3200 MHz"], price: 175, gamePower: 20 },
+            { img: ram3, name: "Crucial CL40 32 GB x2", details: [t.capacite + ": 32 GB x 2", "DDR5 4800 MHz"], price: 425, gamePower: 50 },
+            { img: ram4, name: "XPG D60G 8 GB x 2", details: [t.capacite + ": 8 GB x 2", "DDR4 3200 MHz"], price: 85, gamePower: 20 },
+            { img: ram5, name: "Corsair Vengeance 16GB x2", details: [t.capacite + ": 16 GB x 2", "DDR4 3200 MHz"], price: 170, gamePower: 30 },
         ],
         fan: [
-            { img: fan1, name: "upHere NT12043-5  x5", details: [t.bruit + ": 25 dB", "CFM: 300"], price: 100 },
+            { img: fan1, name: "upHere NT12043-5 x5", details: [t.bruit + ": 25 dB", "CFM: 300"], price: 100 },
             { img: fan2, name: "Artic F12 x5", details: [t.bruit + ": 32 dB", "CFM: 200"], price: 50 },
             { img: fan3, name: "Noctua NF-P12", details: [t.bruit + ": 27 dB", "CFM: 235"], price: 20 },
             { img: fan4, name: "Cooler Master MF120 RGB x3", details: [t.bruit + ": 24 dB", "CFM: 270"], price: 55 },
@@ -237,10 +218,10 @@ export function getComputerComponents(locale) {
         ],
         case: [
             { img: case1, name: "Vetroo K1 Pangolin", details: [t.ventilPasInclus], price: 250 },
-            { img: case2, name: "KEDIERS", details: [t.ventilInclus + "  (x7)"], price: 200 },
+            { img: case2, name: "KEDIERS", details: [t.ventilInclus + " (x7)"], price: 200 },
             { img: case3, name: "Razer NXT250", details: [t.ventilPasInclus], price: 150 },
-            { img: case4, name: "Cooler Master MasterBox MB311L", details: [t.ventilInclus + "  (2)"], price: 100 },
-            { img: case5, name: "Cooler Master MasterBox TD500", details: [t.ventilInclus + "  (3)"], price: 125 },
+            { img: case4, name: "Cooler Master MasterBox MB311L", details: [t.ventilInclus + " (2)"], price: 100 },
+            { img: case5, name: "Cooler Master MasterBox TD500", details: [t.ventilInclus + " (3)"], price: 125 },
         ],
         os: [
             { img: windows1, name: "Windows 10 Home", price: 150 },

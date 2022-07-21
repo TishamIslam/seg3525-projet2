@@ -3,28 +3,39 @@ import Head from "next/head"
 
 import DisplayCard from "../../components/DisplayCard"
 import Comment from "../../components/Comment"
-import { computers, games, fps } from "../../backend/imports"
+import { computers, games, getComputerComponents } from "../../backend/imports"
 
-import generateCardText from "../../lib/computerCard"
+import generateComputerCardText from "../../lib/computerCard"
 
 import en from "../../locale/en"
 import fr from "../../locale/fr"
 
-export default function Ordinateur({ locale, computer, games, fps }) {
+export default function Ordinateur({ locale, computer, computerComponents, computerImg, games }) {
     const t = locale === 'fr' ? fr : en
 
     function renderComputer() {
         return (
-            <DisplayCard text={generateCardText(computer)} imageAlt={computer.alt} image={computer.img} />
+            <DisplayCard text={generateComputerCardText(computer)} imageAlt={computer.alt} image={computerImg} />
         )
     }
 
     function renderGameFPS() {
+        let totalGamePower = 0;
+        Object.entries(computer.components).forEach(([cType, cIDs]) => {
+            if (cIDs instanceof Array) {
+                cIDs.forEach((cID) => {
+                    totalGamePower += computerComponents[cType][cID]?.gamePower ?? 0
+                })
+            } else {
+                totalGamePower += computerComponents[cType][cIDs]?.gamePower ?? 0
+            }
+        });
         return (
             <div className="py-4 md:grid md:grid-cols-2 md:gap-8">
                 {games.map((game, index) => {
+                    let fps = parseInt(totalGamePower / (index + 1))
                     return (
-                        <DisplayCard objectFit="cover" key={index} text={<p>{t.ipsPour} {game.name}: {fps[index]}</p>} image={game.img} imgWidth={540} imgHeight={300} />
+                        <DisplayCard objectFit="cover" key={index} text={<p>{t.ipsPour} {game.name}: {fps}</p>} image={game.img} imgWidth={540} imgHeight={300} />
                     )
                 })}
             </div>
@@ -66,13 +77,14 @@ export default function Ordinateur({ locale, computer, games, fps }) {
 }
 
 export async function getStaticProps({ locale, params }) {
-
+    const computerComponents = getComputerComponents(locale)
     return {
         props: {
             locale: locale,
             computer: computers[params.ordi],
+            computerImg: computerComponents['case'][computers[params.ordi].components.case].img,
+            computerComponents: computerComponents,
             games: games,
-            fps: fps[params.ordi],
         }
     }
 }
