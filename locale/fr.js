@@ -35,6 +35,8 @@ export default {
     faqA3 : "Pour le moment, nous n'avons pas mis en place un tel service, bien qu'il soit très demandé, nous l'avons donc ajouté à notre liste de choses à faire. Cependant, nous avons plusieurs constructions vedettes réalisées par certains de nos clients que vous pouvez consulter.",
     faqQ4 : "Nos informations d'utilisateur sont-elles stockées ?",
     faqA4 : "Vos informations sont effectivement stockées, mais elles le sont sur votre ordinateur, pas sur nos serveurs. Ainsi, toute information de paiement que vous saisissez ne sera pas divulguée par quelqu'un qui pirate nos bases de données, car nous n'avons pas de bases de données contenant des informations personnelles.",
+    faqQ5 : "Est ce qu'on peut utiliser ce site pour acheter des composants individuels ?",
+    faqA5 : "Oui! Tu dois simplement choisissez le composant que tu veux, ce qui te redirigeras vers le page construction. Là, tu peux aller vers le bas et achetez comme normale - il va te donner un avertissement, mais la deuxième fois il va fonctionner.",
 
     //info page
     infoImportantes: "Information importantes",

@@ -15,8 +15,8 @@ import fr from '../locale/fr'
 export default function Home({ locale }) {
   const t = locale === 'en' ? en : fr
 
-  const faqQuestions = [t.faqQ1, t.faqQ2, t.faqQ3, t.faqQ4]
-  const faqAnswers = [t.faqA1, t.faqA2, t.faqA3, t.faqA4]
+  const faqQuestions = [t.faqQ1, t.faqQ2, t.faqQ3, t.faqQ4, t.faqQ5]
+  const faqAnswers = [t.faqA1, t.faqA2, t.faqA3, t.faqA4, t.faqA5]
   const FAQ = (
     <div className='space-y-4' >
       {faqQuestions.map((faq, index) => {

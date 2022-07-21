@@ -35,6 +35,8 @@ export default {
     faqA3: "At the moment, we haven't implemented such a service, although it is in high demand, so we have added it to our to-do list. However, we do have several featured builds made by some of our customers that you can view.",
     faqQ4: "Is our user information stored?",
     faqA4: "Your information is indeed stored, however it's stored on your computer, not our servers. So, any payment information that you enter won't be leaked by someone hacking into our databases, as we have no databases with personal information.",
+    faqQ5: "Can we use this site to buy individual components?",
+    faqA5: "Yes, you just have to choose the component you want, which will redirect you to the construction page. There you can scroll down and buy as normal - it will give you a warning, but the second time it will work.",
 
     //info page
     infoImportantes: "Important Information",
