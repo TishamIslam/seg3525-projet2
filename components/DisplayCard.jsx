@@ -2,7 +2,6 @@ import Image from "next/image"
 import Link from "next/link"
 
 export default function DisplayCard(props) {
-    // const aspectRatio = (props?.aspectRatio ?? "") === "16/9" ? "next-image-ratio-16-9" : props.aspectRatio
     const card = (
         <div className="space-y-0 p-0 my-4 shadow-xl">
             <div className={"h-min rounded-t-md align-middle leading-none next-image-block "}>

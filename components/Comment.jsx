@@ -12,7 +12,7 @@ export default function Comment(props) {
         <div >
             <details className={"max-w-sm lg:max-w-md mt-4 " + indent[props?.indent ?? 0]} open>
                 <summary className="p-2 bg-mint flex space-x-2 relative h-20 rounded-t-md border border-mint-dark" onClick={() => {setShowText(!showText)}}>
-                    <Image src={profile} width="64px" height="64px" objectFit="cover" />
+                    <Image alt="Profile picture/ Avatar" src={profile} width="64px" height="64px" objectFit="cover" />
                     <h3 className="text-xl">{props?.name ?? "Anonyme"}</h3>
                     <FontAwesomeIcon size="xl" icon={!showText ? faChevronCircleUp : faChevronCircleDown} className="absolute right-2 bottom-2" />
                 </summary>

@@ -39,7 +39,7 @@ export default function Home({ locale }) {
 
       <h1 className='text-5xl text-center font-bold text-green-dark'>TI Tech Support</h1>
       <div className='flex mx-auto justify-center my-4'>
-        <Image src={logo}></Image>
+        <Image src={logo} alt="Tisham Islam Tech Support, Logo" />
       </div>
 
       <div className='grid grid-cols-1 mx-auto justify-center my-4 w-fit'>

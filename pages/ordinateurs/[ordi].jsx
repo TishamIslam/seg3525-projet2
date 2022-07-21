@@ -45,7 +45,7 @@ export default function Ordinateur({ locale, easterEgg, computerID, computerComp
                 {games.map((game, index) => {
                     let fps = parseInt(totalGamePower / (index + 1))
                     return (
-                        <DisplayCard objectFit="cover" key={index} text={<p>{t.ipsPour} {game.name}: {fps}</p>} image={game.img} imgWidth={540} imgHeight={300} />
+                        <DisplayCard objectFit="cover" key={index} text={<p>{t.ipsPour} {game.name}: {fps}</p>} image={game.img} imageAlt={game.name} imgWidth={540} imgHeight={300} />
                     )
                 })}
             </div>
