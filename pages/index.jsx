@@ -18,7 +18,7 @@ export default function Home({ locale }) {
   const faqQuestions = [t.faqQ1, t.faqQ2, t.faqQ3, t.faqQ4]
   const faqAnswers = [t.faqA1, t.faqA2, t.faqA3, t.faqA4]
   const FAQ = (
-    <div className='space-y-2' >
+    <div className='space-y-4' >
       {faqQuestions.map((faq, index) => {
         return (
         <div key={index}>

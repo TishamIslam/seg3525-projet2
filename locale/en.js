@@ -4,6 +4,7 @@ export default {
     submit: "Submit",
     optionnel: "(Optional)",
     anon: "Anonymous",
+    logoGoesHere: "Logo goes here",
 
     //nav
     accueil: 'Home',
@@ -28,12 +29,12 @@ export default {
     servicesComposants: "Browse the components we have available",
     faqQ1: "Where do your components come from?",
     faqA1: "We source as many of our computer components from various local Canadian manufacturers as possible, though we still have to import many components over the border. ",
-    faqQ2: "Question 2",
-    faqA2: "Lorem ipsum",
-    faqQ3: "Question 3",
-    faqA3: "Lorem ipsum",
-    faqQ4: "Question 4",
-    faqA4: "Lorem ipsum",
+    faqQ2: "Is this service only oriented towards gamers?",
+    faqA2: "No, this service is oriented towards anyone that wishes to build and/or learn how to build a computer. Though product availability may trend towards things popular amongst gamers, we make sure to offer high-quality products for other demographics.",
+    faqQ3: "Can I upload a build to show my friends?",
+    faqA3: "At the moment, we haven't implemented such a service, although it is in high demand, so we have added it to our to-do list. However, we do have several featured builds made by some of our customers that you can view.",
+    faqQ4: "Is our user information stored?",
+    faqA4: "Your information is indeed stored, however it's stored on your computer, not our servers. So, any payment information that you enter won't be leaked by someone hacking into our databases, as we have no databases with personal information.",
 
     //info page
     infoImportantes: "Important Information",

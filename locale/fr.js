@@ -1,9 +1,10 @@
 export default {
     //general
-    lorem: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eum quaerat blanditiis corporis eveniet officia repellendus, et quae voluptas eos sapiente ad soluta adipisci a officiis totam impedit maiores nostrum?",
+    lorem: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eum quaerat blanditiis corporis eveniet officia repellendus, et quae voluptas eos sapiente ad soluta adipisci a officiis totam impedit maiores nostrum ?",
     submit: "Soumettre",
     optionnel: "(Optionnel)",
     anon: "Anonyme",
+    logoGoesHere: "Le logo va ici",
 
     //nav
     accueil: 'Accueil',
@@ -26,14 +27,14 @@ export default {
     servicesOrdi: "Voir des ordinateurs que d'autres personnes ont construits",
     servicesConstruit: "Construire ton propre ordinateur",
     servicesComposants: "Parcourir les composants nous avons disponibles",
-    faqQ1: "Où est ce que vos composants vient de?",
+    faqQ1: "Où est ce que vos composants vient de ?",
     faqA1: "Nous nous procurons autant de composants informatiques que possible auprès de divers fabricants canadiens locaux, même si nous devons encore importer de nombreux composants de l'autre côté de la frontière.",
-    faqQ2: "Question 2",
-    faqA2: "Lorem ipsum",
-    faqQ3: "Question 3",
-    faqA3: "Lorem ipsum",
-    faqQ4: "Question 4",
-    faqA4: "Lorem ipsum",
+    faqQ2 : "Ce service est-il uniquement destiné aux joueurs de jeux vidéos ?",
+    faqA2 : "Non, ce service est destiné à tous ceux qui souhaitent construire et/ou apprendre à construire un ordinateur. Bien que la disponibilité des produits puisse être orientée vers les produits populaires auprès des joueurs de jeux vidéos, nous nous assurons d'offrir des produits de haute qualité pour les autres groupes démographiques.",
+    faqQ3 : "Puis-je télécharger une construction pour la montrer à mes amis ?",
+    faqA3 : "Pour le moment, nous n'avons pas mis en place un tel service, bien qu'il soit très demandé, nous l'avons donc ajouté à notre liste de choses à faire. Cependant, nous avons plusieurs constructions vedettes réalisées par certains de nos clients que vous pouvez consulter.",
+    faqQ4 : "Nos informations d'utilisateur sont-elles stockées ?",
+    faqA4 : "Vos informations sont effectivement stockées, mais elles le sont sur votre ordinateur, pas sur nos serveurs. Ainsi, toute information de paiement que vous saisissez ne sera pas divulguée par quelqu'un qui pirate nos bases de données, car nous n'avons pas de bases de données contenant des informations personnelles.",
 
     //info page
     infoImportantes: "Information importantes",

@@ -47,7 +47,7 @@ export default function Header() {
                                 <a className='gold-link font-medium underline md:hidden'>{localeLinkLang === 'en' ? "English" : "Français"}</a>
                             </Link>
                             <div className="flex-shrink-0 flex items-center text-white">
-                                Logo goes here
+                                {t.logoGoesHere}
                             </div>
                             <div className="hidden md:flex md:ml-6 items-center">
                                 <div className="flex space-x-2">
