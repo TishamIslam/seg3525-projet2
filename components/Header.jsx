@@ -22,8 +22,8 @@ export default function Header() {
         { name: t.accueil, href: '/', current: true, icon: faHouseChimney },
         { name: t.information, href: '/info', current: false, icon: faCircleInfo },
         { name: t.ordinateurs, href: '/ordinateurs', current: false, icon: faComputer },
-        { name: t.créerUnOrdinateur, href: '/construire', current: false, icon: faScrewdriverWrench },
         { name: t.composantes, href: '/composants', current: false, icon: faTableList },
+        { name: t.créerUnOrdinateur, href: '/construire', current: false, icon: faScrewdriverWrench },
     ]
 
     //sets whichever page is current as current by checking the url

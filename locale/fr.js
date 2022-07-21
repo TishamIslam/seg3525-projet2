@@ -74,10 +74,15 @@ export default {
     choisi: "choisi",
     estimationJeux: "Une estimation de performance sur quelque jeux vidéos",
     coutTotale: "Coût totale",
-    achetezMaintenant: "Achetez maintenant!",
+    achetez: "Achetez composants selectés",
     nulComposants: "Erreur: Il n'y a pas de composants choisi.",
     avertissementComposantsRequis: "Avertissement: Il y a des composants requis qui ne sont pas choisis. Cependant, tu peux ignorer ce message et continuer si tu veux acheter les composants tu as choisi au moment.",
-
+    nomComplet: "Prénom et nom de famille",
+    carteCredit : "Carte de crédit",
+    securityCode : "Code de sécurité de la carte",
+    merciPourAcheter: "Merci pour utiliser nos services!",
+    tuAsAchete: "Tu as acheté: ",
+    
     //components page
     cpu: "UCT/CPU",
     gpu: "GPU",

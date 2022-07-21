@@ -74,9 +74,14 @@ export default {
     choisi: "Chosen ",
     estimationJeux: "An estimation of performance on a number of video games",
     coutTotale: "Total price",
-    achetezMaintenant: "Buy now!",
+    achetez: "Buy selected components",
     nulComposants: "Error: There are no selected components",
     avertissementComposantsRequis: "Warning: You haven't chosen some required components. If this was intentional (due to having the components already or the like), please ignore this message.",
+    nomComplet: "First name and last name",
+    carteCredit: "Credit card",
+    securityCode: "Credit card security code",
+    merciPourAcheter: "Thanks for purchasing our products!",
+    tuAsAchete: "You bought: ",
 
     //components page
     cpu: "CPU",

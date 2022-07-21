@@ -14,7 +14,7 @@ import fr from "../locale/fr"
 
 export default function BuildComputer({ locale, components, cMetadata }) {
     const t = locale === 'en' ? en : fr
-    const { query, push } = useRouter()
+    const { query } = useRouter()
     let totalPrice = 0
     let totalGamePower = 0
     const [unchosenRequiredComponents, setUnchosenRequiredComponents] = useState([])
@@ -58,19 +58,19 @@ export default function BuildComputer({ locale, components, cMetadata }) {
 
     useEffect(() => { //initialize user data when the page is loaded
         const newUnchosenRequiredComponents = []
-        Object.entries(userSetters).forEach(([componentType, setter]) => {
-            let savedComponent = JSON.parse(window.localStorage.getItem(componentType)) ?? []
-            if (query?.componentType === componentType && query?.componentID) {
+        Object.entries(userSetters).forEach(([cType, setter]) => {
+            let savedComponent = JSON.parse(window.localStorage.getItem(cType)) ?? []
+            if (query?.componentType === cType && query?.componentID) {
                 const cID = parseInt(query.componentID)
                 savedComponent.push(cID)
-                if (!cMetadata[componentType].multiple) {
+                if (!cMetadata[cType].multiple) {
                     savedComponent = [cID]
                 }
-                window.localStorage.setItem(componentType, JSON.stringify(savedComponent))
+                window.localStorage.setItem(cType, JSON.stringify(savedComponent))
             }
             setter(savedComponent) //SETTER? I don't even know 'er
-            if (cMetadata[componentType].required && savedComponent.length == 0) {
-                newUnchosenRequiredComponents.push(componentType)
+            if (cMetadata[cType].required && savedComponent.length == 0) {
+                newUnchosenRequiredComponents.push(cType)
             }
         })
         console.log(newUnchosenRequiredComponents)
@@ -120,9 +120,19 @@ export default function BuildComputer({ locale, components, cMetadata }) {
     function handleBuy(event) {
         event.preventDefault()
         let noComponents = true
+        let confirmationString = t.merciPourAcheter + "\n" + t.tuAsAchete + "\n"
         Object.entries(user).forEach(([cType, component]) => {
             if (component.length > 0) {
                 noComponents = false
+                if (component.length == 1) {
+                    let chosenComp = components[cType][component[0]]
+                    confirmationString += t[cType] + ": " + chosenComp.name + ", $" + chosenComp.price + "\n"
+                } else {
+                    component.forEach((cID, index) => {
+                        let chosenComp = components[cType][component[index]]
+                        confirmationString += t[cType] + " " + (index + 1) + ": " + chosenComp.name + ", $" + chosenComp.price + "\n"
+                    })
+                }
             }
         })
         if (noComponents) {
@@ -133,7 +143,8 @@ export default function BuildComputer({ locale, components, cMetadata }) {
             setWarnedRequiredNotBought(false)
             return false
         } else {
-            push('/achete')
+            confirmationString += t.merciPourAcheter + "\n"
+            alert(confirmationString)
         }
     }
 
@@ -145,22 +156,22 @@ export default function BuildComputer({ locale, components, cMetadata }) {
             <h1>{t.créerUnOrdinateur}</h1>
             <span>* {t.indiqueRequis}</span>
             <h2>{t.choisirDesComposants}</h2>
-            {Object.entries(user).map(([componentType, chosenComponents]) => {
+            {Object.entries(user).map(([cType, chosenComponents]) => {
                 return (
-                    <div key={componentType} id={componentType} className="bg-mint p-2 py-3 rounded-lg">
+                    <div key={cType} id={cType} className="bg-mint p-2 py-3 rounded-lg">
                         {chosenComponents.length === 0
                             ? <div className="p-2 flex justify-between items-center">
-                                <h3 className="text-lg md:text-xl">{cMetadata[componentType].required ? "* " : ""}{t[componentType + "Ajouter"]}</h3>
-                                <PlusMinusButton plus={true} link={"/composants/" + componentType} />
+                                <h3 className="text-lg md:text-xl">{cMetadata[cType].required ? "* " : ""}{t[cType + "Ajouter"]}</h3>
+                                <PlusMinusButton plus={true} link={"/composants/" + cType} />
                             </div>
                             : <>
                                 <div className="p-2 flex justify-between items-center">
-                                    <h3 className="text-lg md:text-xl">{locale === 'en' ? t.choisi + t[componentType] : t[componentType] + " " + t.choisi}:</h3>
-                                    {cMetadata[componentType].multiple ? <PlusMinusButton plus={true} link={{ pathname: "/composants/" + componentType, query: { return: true } }} /> : ""}
+                                    <h3 className="text-lg md:text-xl">{locale === 'en' ? t.choisi + t[cType] : t[cType] + " " + t.choisi}:</h3>
+                                    {cMetadata[cType].multiple ? <PlusMinusButton plus={true} link={{ pathname: "/composants/" + cType, query: { return: true } }} /> : ""}
                                 </div>
                                 <div className="space-y-6 p-2 mt-2">
                                     {chosenComponents.map((componentID, index) => {
-                                        const chosenComponent = components[componentType][componentID];
+                                        const chosenComponent = components[cType][componentID];
                                         totalPrice += chosenComponent.price
                                         totalGamePower += chosenComponent?.gamePower ?? 0
                                         return (
@@ -168,7 +179,7 @@ export default function BuildComputer({ locale, components, cMetadata }) {
                                                 key={index}
                                                 component={chosenComponent}
                                                 button={true}
-                                                onClick={() => removeUserComponent(componentType, componentID)}
+                                                onClick={() => removeUserComponent(cType, componentID)}
                                             />
                                         )
                                     })
@@ -215,11 +226,17 @@ export default function BuildComputer({ locale, components, cMetadata }) {
 
             {/* Buying section */}
             <hr className="border border-green" />
-            <div className="p-2 py-8 grid grid-cols-1 gap-2 md:flex justify-between items-center">
-                <span className="text-xl md:text-2xl text-center md:text-left">{t.coutTotale}: {totalPrice} $</span>
-                <a href="/achete" className="p-2 md:px-8 md:w-60 md:text-lg rounded-md bg-green hover:bg-green-light text-white" onClick={event => handleBuy(event)}>
-                    {t.achetezMaintenant}
-                </a>
+            <div className="p-2 py-8">
+                <h2>{t.achetezComposants}</h2>
+                <strong className="text-lg md:text-xl text-center md:text-left">{t.coutTotale}: {totalPrice} $</strong>
+                <form onSubmit={event => handleBuy(event)} className="block border space-y-4 border-mint-dark bg-mint p-2 py-4 md:p-4 md:py-6">
+                    <input required id="name" name="name" className="block border border-green rounded p-2 placeholder:text-gray-400" type="text" placeholder={t.nomComplet} />
+                    <input required id="credit-card" name="credit-card" className="block border border-green rounded p-2 placeholder:text-gray-400" type="number" placeholder={t.carteCredit} />
+                    <input required id="security-code" name="security-code" className="block border border-green rounded p-2 placeholder:text-gray-400" type="number" placeholder={t.securityCode} />
+                    <button type="submit" className="p-2 md:px-8 md:text-lg rounded-md bg-green hover:bg-green-light text-white">
+                        {t.achetez}
+                    </button>
+                </form>
             </div>
         </div>
     )

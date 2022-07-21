@@ -87,10 +87,10 @@ export default function Ordinateur({ locale, easterEgg, computerID, computerComp
                 })}
             </div>
 
-            <h3 className="text-lg my-2">{t.ajouterCommentaire}</h3>
+            <h3 className="my-2">{t.ajouterCommentaire}</h3>
             <form onSubmit={event => handleCommentSubmit(event)} className="border space-y-4 border-mint-dark bg-mint p-2 py-4 md:p-4 md:py-6">
                 <input id="comment-name" name="comment-name" className="border border-green rounded p-2 placeholder:text-gray-400" type="text" placeholder={t.nom + " " + t.optionnel} />
-                <textarea required id="comment-text" name="comment-text" rows="4" className="border border-green block rounded p-2 w-full max-w-md" placeholder={t.commentaireExemple} />
+                <textarea required id="comment-text" name="comment-text" rows="4" className="border border-green block rounded p-2 w-full" placeholder={t.commentaireExemple} />
                 <button type="submit" className="p-2 px-8 w-48 md:text-lg rounded-md bg-green hover:bg-green-light text-white" >{t.submit}</button>
             </form>
         </>
