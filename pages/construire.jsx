@@ -4,7 +4,7 @@ import { useRouter } from "next/router"
 import { useEffect, useState } from "react"
 
 import DisplayCard from "../components/DisplayCard"
-import ActionButton from "../components/ActionButton"
+import PlusMinusButton from "../components/PlusMinusButton"
 import ItemCard from "../components/ItemCard"
 
 import { getComputerComponents, componentMetadata, games } from "../backend/imports"
@@ -151,12 +151,12 @@ export default function BuildComputer({ locale, components, cMetadata }) {
                         {chosenComponents.length === 0
                             ? <div className="p-2 flex justify-between items-center">
                                 <h3 className="text-lg md:text-xl">{cMetadata[componentType].required ? "* " : ""}{t[componentType + "Ajouter"]}</h3>
-                                <ActionButton plus={true} link={"/composants/" + componentType} />
+                                <PlusMinusButton plus={true} link={"/composants/" + componentType} />
                             </div>
                             : <>
                                 <div className="p-2 flex justify-between items-center">
                                     <h3 className="text-lg md:text-xl">{locale === 'en' ? t.choisi + t[componentType] : t[componentType] + " " + t.choisi}:</h3>
-                                    {cMetadata[componentType].multiple ? <ActionButton plus={true} link={{ pathname: "/composants/" + componentType, query: { return: true } }} /> : ""}
+                                    {cMetadata[componentType].multiple ? <PlusMinusButton plus={true} link={{ pathname: "/composants/" + componentType, query: { return: true } }} /> : ""}
                                 </div>
                                 <div className="space-y-6 p-2 mt-2">
                                     {chosenComponents.map((componentID, index) => {

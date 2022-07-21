@@ -1,17 +1,27 @@
-import { useRouter } from "next/router"
+import { useState, useEffect } from "react"
 import Head from "next/head"
 
 import DisplayCard from "../../components/DisplayCard"
 import Comment from "../../components/Comment"
-import { computers, games, getComputerComponents } from "../../backend/imports"
+import { comments as commentsFile, easterEggComments, computers, games, getComputerComponents } from "../../backend/imports"
 
 import generateComputerCardText from "../../lib/computerCard"
 
 import en from "../../locale/en"
 import fr from "../../locale/fr"
 
-export default function Ordinateur({ locale, computer, computerComponents, computerImg, games }) {
+export default function Ordinateur({ locale, easterEgg, computerID, computerComponents, computerImg, games }) {
     const t = locale === 'fr' ? fr : en
+
+    const computer = computers[computerID]
+    const [comments, setComments] = useState(easterEgg ? easterEggComments : commentsFile[computerID])
+
+    useEffect(() => { //initialize user data when the page is loaded
+        let savedComments = JSON.parse(window.localStorage.getItem('comments-' + computerID))
+        if (savedComments) {
+            setComments(savedComments)
+        }
+    }, [])
 
     function renderComputer() {
         return (
@@ -40,7 +50,20 @@ export default function Ordinateur({ locale, computer, computerComponents, compu
                 })}
             </div>
         )
+    }
 
+    function handleCommentSubmit(e) {
+        e.preventDefault()
+        const commentText = document.getElementById('comment-text').value
+        let commentName = document.getElementById('comment-name').value
+        if (commentName.trim() === '') {
+            commentName = t.anon
+        }
+        setComments(prevComments => {
+            const newComments = [...prevComments, { name: commentName, text: commentText }]
+            window.localStorage.setItem('comments-' + computerID, JSON.stringify(newComments))
+            return newComments
+        })
     }
 
     return (
@@ -59,18 +82,16 @@ export default function Ordinateur({ locale, computer, computerComponents, compu
 
             <h2 className="mt-8 text-center ">{t.sectionCommentaires}</h2>
             <div className="py-2 md:grid md:grid-cols-2 md:gap-8 mx-auto w-fit">
-                <Comment name="Commenter 1" />
-                <Comment name="Commenter 2" />
-                <Comment />
-                <Comment name="Commenter 3" />
-                <Comment name="Commenter 4" />
-                <Comment />
+                {comments.map((comment, index) => {
+                    return <Comment key={index} name={comment.name} text={comment.text} />
+                })}
             </div>
 
             <h3 className="text-lg my-2">{t.ajouterCommentaire}</h3>
-            <form >
-                <input name="comment-name" className="border border-green my-2 rounded p-2 placeholder:text-gray-400" type="text" placeholder={t.nom} />
-                <textarea className="border border-green block rounded p-2 my-2 w-full max-w-md" name="comment-text" rows="4" placeholder={t.commentaireExemple} />
+            <form onSubmit={event => handleCommentSubmit(event)} className="border space-y-4 border-mint-dark bg-mint p-2 py-4 md:p-4 md:py-6">
+                <input id="comment-name" name="comment-name" className="border border-green rounded p-2 placeholder:text-gray-400" type="text" placeholder={t.nom + " " + t.optionnel} />
+                <textarea required id="comment-text" name="comment-text" rows="4" className="border border-green block rounded p-2 w-full max-w-md" placeholder={t.commentaireExemple} />
+                <button type="submit" className="p-2 px-8 w-48 md:text-lg rounded-md bg-green hover:bg-green-light text-white" >{t.submit}</button>
             </form>
         </>
     )
@@ -78,19 +99,25 @@ export default function Ordinateur({ locale, computer, computerComponents, compu
 
 export async function getStaticProps({ locale, params }) {
     const computerComponents = getComputerComponents(locale)
+    let easterEgg = false
+    if (params.ordi === 'easter-egg') {
+        params.ordi = 0
+        easterEgg = true
+    }
     return {
         props: {
             locale: locale,
-            computer: computers[params.ordi],
+            computerID: params.ordi,
             computerImg: computerComponents['case'][computers[params.ordi].components.case].img,
             computerComponents: computerComponents,
             games: games,
+            easterEgg: easterEgg
         }
     }
 }
 
 export async function getStaticPaths() {
-    const ids = ['0', '1', '2', '3', '4']
+    const ids = ['0', '1', '2', '3', '4', 'easter-egg']
     const locales = ['en', 'fr']
     const paths = []
     ids.forEach(id => {

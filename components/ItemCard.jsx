@@ -1,5 +1,5 @@
 import Image from "next/image"
-import ActionButton from "./ActionButton"
+import PlusMinusButton from "./PlusMinusButton"
 
 import en from "../locale/en"
 import fr from "../locale/fr"
@@ -15,7 +15,7 @@ export default function ItemCard(props) {
             <div className="p-1 bg-white rounded-l-md h-24 relative">
                 <Image src={img} alt={name} placeholder="blur" objectFit="contain" width="88px" height="88px" layout="fixed" />
                 {props?.button ?? false ?
-                    <ActionButton
+                    <PlusMinusButton
                         onClick={props?.onClick}
                         styling="absolute bottom-1 left-1 h-6 w-6"
                         size="1x"

@@ -17,8 +17,7 @@ export default function Comment(props) {
                     <FontAwesomeIcon size="xl" icon={!showText ? faChevronCircleUp : faChevronCircleDown} className="absolute right-2 bottom-2" />
                 </summary>
                 <div className="p-2 bg-gray-100 flex rounded-b-md border border-mint-dark">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto laudantium dicta numquam earum in
-                        modi odit voluptatum harum asperiores ut, ducimus dolore quae sapiente error facere? Necessitatibus qui laboriosam fugiat.</p>
+                    <p>{props.text}</p>
                 </div>
             </details>
         </div>

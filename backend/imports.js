@@ -87,6 +87,40 @@ export const games = [
     { name: "Cyberpunk 2077", img: cyberpunk },
 ]
 
+export const comments = [
+    [
+        { name: "John Boe", text: "J'aime cette ordinateur! Il semble assez bien créé, même s'il utilise des composants de faible coût." },
+        { name: "John Coe", text: "I really like this design, it looks very aesthetically pleasing despite the budget constraints." }
+    ],
+    [
+        { name: "John Doe", text: "Je n'aime pas cette ordinateur! Il semble trop coûteux pour aucune raison, il faut sauver ton argent!!" },
+        { name: "John Foe", text: "I really like this design, despite it being very expensive, the pieces are each the most effective ones on the market instead of gaudy things that are expensive for no reason" }
+    ],
+    [
+        { name: "John Goe", text: "J'aime cette ordinateur! Il semble très bien fait pour ceux et celles qui veulent un ordinateur pour les jeux mais pas trop d'argent." },
+        { name: "John Hoe", text: "I don't like this computer, it cuts too many corners, with an additonal 200 or so dollars you could make some major improvements all across the board" }
+    ],
+    [
+        { name: "John Joe", text: "Je n'aime pas cet ordinateur, il a des composants qui ne feront rien pour les personnes qui rendent des vidéos. Tu pourrais utiliser moins de RAM et des ventilateurs moins cher." },
+        { name: "John Koe", text: "I really like this design, it looks very suitable for video-rendering. It's a bit on the expensive side though, I wouldn't call it truly \"affordable\"" }
+    ],
+    [
+        { name: "John Loe", text: "J'aime cette ordinateur! Il semble assez aesthétique et performant." },
+        { name: "John Moe", text: "I don't think this computer is very good. Also, you have a typo in your title, might wanna fix that up." }
+    ],
+]
+
+export const easterEggComments = [
+    {name: "Brianna Baguette", text: "I love huge cocks!"},
+    {name: "Neesus", text: "I love toes and dominatrices"},
+    {name: "Rupert \"Jamer\" Holmes", text: "I love MILFs!"},
+    {name: "Loic", text: "I love bread!"},
+    {name: "Ali", text: "I hate getting racially discriminated and consequently fired from my job even though I did nothing wrong!"},
+    {name: "Yoshifan", text: "I love boobs!"},
+    {name: "Naomieeee", text: "I love women!"},
+    {name: "Me", text: "I love your mom 😏😏😏!"}
+]
+
 export const computers = [
     {
         alt: "Ordinateur noir avec un écran à maille et deux ventilateurs lumineux en couleurs arc-en-ciel (RGB)",
@@ -136,8 +170,8 @@ export const computers = [
         components: {
             gpu: 3,
             cpu: 1,
-            ram: [1],
-            storage: [2,5],
+            ram: [1, 3],
+            storage: [2, 5],
             motherboard: 4,
             psu: 3,
             fan: [2, 2, 2],
@@ -164,11 +198,11 @@ export function getComputerComponents(locale) {
 
     return {
         gpu: [
-            { img: gpu1, name: "ROG Strix 8 GB", price: 560, details: ["VRAM: 8 GB, 65 MHz"], gamePower: 212 },
-            { img: gpu2, name: "GeForce 1060 4 GB", price: 230, details: ["VRAM: 4 GB, 60 MHz"], gamePower: 176 },
-            { img: gpu3, name: "ASUS GeForce RTX 3070 16 GB", price: 1000, details: ["VRAM: 16 GB, 120 MHz"], gamePower: 289 },
-            { img: gpu4, name: "ASUS GeForce GTX 1050Ti 4 GB", price: 200, details: ["VRAM: 4 GB, 80 MHz"], gamePower: 156 },
-            { img: gpu5, name: "MSI GeForce RTX 3060Ti 12 GB", price: 900, details: ["VRAM: 12 GB, 40 MHz"], gamePower: 255 },
+            { img: gpu1, name: "ROG Strix 8 GB", price: 560, details: ["VRAM: 8 GB, 65 MHz"], gamePower: 150 },
+            { img: gpu2, name: "GeForce 1060 4 GB", price: 230, details: ["VRAM: 4 GB, 60 MHz"], gamePower: 60 },
+            { img: gpu3, name: "ASUS GeForce RTX 3070 16 GB", price: 1000, details: ["VRAM: 16 GB, 120 MHz"], gamePower: 200 },
+            { img: gpu4, name: "ASUS GeForce GTX 1050Ti 4 GB", price: 200, details: ["VRAM: 4 GB, 80 MHz"], gamePower: 50 },
+            { img: gpu5, name: "MSI GeForce RTX 3060Ti 12 GB", price: 900, details: ["VRAM: 12 GB, 40 MHz"], gamePower: 180 },
         ],
         cpu: [
             { img: cpu1, name: "Intel Core i7-10700F", price: 330, details: [t.coeurs + ": 8", t.vitesse + ": 4.8 GHz"], gamePower: 45 },

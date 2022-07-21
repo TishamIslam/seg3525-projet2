@@ -1,5 +1,9 @@
 export default {
+    //general
     lorem: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eum quaerat blanditiis corporis eveniet officia repellendus, et quae voluptas eos sapiente ad soluta adipisci a officiis totam impedit maiores nostrum?",
+    submit: "Soumettre",
+    optionnel: "(Optionnel)",
+    anon: "Anonyme",
 
     //nav
     accueil: 'Accueil',

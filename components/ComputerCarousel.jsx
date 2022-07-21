@@ -3,8 +3,6 @@ import DisplayCard from "./DisplayCard"
 import { computers, getComputerComponents } from "../backend/imports"
 import generateComputerCardText from "../lib/computerCard"
 
-import en from "../locale/en"
-import fr from "../locale/fr"
 import { useRouter } from "next/router"
 
 export default function ComputerCarousel() {
