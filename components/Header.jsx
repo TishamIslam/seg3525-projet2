@@ -42,7 +42,7 @@ export default function Header() {
             {({ open }) => (
                 <>
                     <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-                        <div className="flex-1 px-2 flex items-center justify-between h-16 sm:items-stretch sm:justify-start">
+                        <div className="flex-1 px-2 flex items-center justify-between h-16">
                             <Link href={router.asPath} locale={localeLinkLang}>
                                 <a className='gold-link font-medium underline md:hidden'>{localeLinkLang === 'en' ? "English" : "Français"}</a>
                             </Link>

@@ -8,7 +8,7 @@ import ItemCard from '../../components/ItemCard'
 import en from "../../locale/en"
 import fr from "../../locale/fr"
 
-export default function Component({ locale, component}) {
+export default function Component({ locale, component, cType }) {
     const t = locale === 'en' ? en : fr
     const { query } = useRouter()
 
@@ -17,6 +17,7 @@ export default function Component({ locale, component}) {
             return (
                 <ItemCard
                     key={index}
+                    cType={cType}
                     component={component}
                     button={true}
                     plus={true}
@@ -57,6 +58,7 @@ export async function getStaticProps({ locale, params }) {
         props: {
             locale: locale,
             component: getComputerComponents(locale)[params.component],
+            cType: params.component,
         }
     }
 }

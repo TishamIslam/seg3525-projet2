@@ -163,12 +163,12 @@ export default function BuildComputer({ locale, components, cMetadata }) {
                         {chosenComponents.length === 0
                             ? <div className="p-2 flex justify-between items-center">
                                 <h3 className="text-lg md:text-xl">{cMetadata[cType].required ? "* " : ""}{t[cType + "Ajouter"]}</h3>
-                                <PlusMinusButton plus={true} link={"/composants/" + cType} />
+                                <PlusMinusButton ariaLabel={t[cType + "Ajouter"]} plus={true} link={"/composants/" + cType} />
                             </div>
                             : <>
                                 <div className="p-2 flex justify-between items-center">
                                     <h3 className="text-lg md:text-xl">{locale === 'en' ? t.choisi + t[cType] : t[cType] + " " + t.choisi}:</h3>
-                                    {cMetadata[cType].multiple ? <PlusMinusButton plus={true} link={{ pathname: "/composants/" + cType, query: { return: true } }} /> : ""}
+                                    {cMetadata[cType].multiple ? <PlusMinusButton ariaLabel={t[cType + "Ajouter"]} plus={true} link={{ pathname: "/composants/" + cType, query: { return: true } }} /> : ""}
                                 </div>
                                 <div className="space-y-6 p-2 mt-2">
                                     {chosenComponents.map((componentID, index) => {
@@ -178,6 +178,7 @@ export default function BuildComputer({ locale, components, cMetadata }) {
                                         return (
                                             <ItemCard
                                                 key={index}
+                                                cType={cType}
                                                 component={chosenComponent}
                                                 button={true}
                                                 onClick={() => removeUserComponent(cType, componentID)}

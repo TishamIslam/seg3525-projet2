@@ -16,6 +16,7 @@ export default function ItemCard(props) {
                 <Image src={img} alt={name} placeholder="blur" objectFit="contain" width="88px" height="88px" layout="fixed" />
                 {props?.button ?? false ?
                     <PlusMinusButton
+                        ariaLabel={t[props.cType + ((props?.plus ?? false) ? "Ajouter" : "Supprimer")] + " " + name}
                         onClick={props?.onClick}
                         styling="absolute bottom-1 left-1 h-6 w-6"
                         size="1x"

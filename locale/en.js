@@ -68,6 +68,17 @@ export default {
     caseAjouter: "Add a Computer case",
     osAjouter: "Add an Operating System",
     accessoryAjouter: "Add Accessories",
+
+    cpuSupprimer: "Remove CPU",
+    gpuSupprimer: "Remove GPU",
+    ramSupprimer: "Remove RAM",
+    storageSupprimer: "Remove storage",
+    motherboardSupprimer: "Remove motherboard",
+    psuSupprimer: "Remove power supply",
+    fanSupprimer: "Remove fan",
+    caseSupprimer: "Remove computer case",
+    osSupprimer: "Remove operating system",
+    accessorySupprimer: "Remove accessory",
     
     sauveAutomatiquement: "This page saves any changes that you make automatically",
     choisirDesComposants: "Pick the parts that you want",
