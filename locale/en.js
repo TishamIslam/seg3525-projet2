@@ -69,6 +69,7 @@ export default {
     osAjouter: "Add an Operating System",
     accessoryAjouter: "Add Accessories",
     
+    sauveAutomatiquement: "This page saves any changes that you make automatically",
     choisirDesComposants: "Pick the parts that you want",
     erreurPasAssezComposants: "Error: You haven't chosen enough components to perform an analysis on video games",
     choisi: "Chosen ",

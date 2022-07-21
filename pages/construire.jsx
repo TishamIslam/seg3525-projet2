@@ -149,11 +149,12 @@ export default function BuildComputer({ locale, components, cMetadata }) {
     }
 
     return (
-        <div className="space-y-6">
+        <div className="space-y-4">
             <Head>
                 <title>TI Tech Support - Construction</title>
             </Head>
             <h1>{t.créerUnOrdinateur}</h1>
+            <strong className="flex text-lg">{t.sauveAutomatiquement}</strong>
             <span>* {t.indiqueRequis}</span>
             <h2>{t.choisirDesComposants}</h2>
             {Object.entries(user).map(([cType, chosenComponents]) => {

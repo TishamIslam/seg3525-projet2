@@ -69,6 +69,7 @@ export default {
     osAjouter: "Ajouter une Système d'exploitation",
     accessoryAjouter: "Ajouter des accessoires",
     
+    sauveAutomatiquement: "Cette page enregistre chaque changement que tu effectues",
     choisirDesComposants: "Choisir les parties désirées",
     erreurPasAssezComposants: "Erreur: Tu n'a pas choisi assez de composants pour voir un analyse de performance sur jeux vidéos",
     choisi: "choisi",
