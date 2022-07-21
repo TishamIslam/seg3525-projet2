@@ -38,7 +38,7 @@ export default function Header() {
 
     }
     return (
-        <Disclosure as="nav" className="bg-green md:text-lg">
+        <Disclosure as="nav" className="bg-green md:text-lg" id='navbar'>
             {({ open }) => (
                 <>
                     <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
