@@ -7,7 +7,7 @@ import Disclosure from '../components/Disclosure'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 
-import logo from '../public/logo.png'
+import logo from '../public/logo.jpg'
 
 import en from '../locale/en'
 import fr from '../locale/fr'
@@ -39,7 +39,7 @@ export default function Home({ locale }) {
 
       <h1 className='text-5xl text-center font-bold text-green-dark'>TI Tech Support</h1>
       <div className='flex mx-auto justify-center my-4'>
-        <Image src={logo} alt="Tisham Islam Tech Support, Logo" />
+        <Image src={logo} alt="Tisham Islam Tech, Logo" />
       </div>
 
       <div className='grid grid-cols-1 mx-auto justify-center my-4 w-fit'>
