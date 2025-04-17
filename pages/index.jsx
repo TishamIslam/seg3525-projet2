@@ -34,10 +34,10 @@ export default function Home({ locale }) {
   return (
     <div>
       <Head>
-        <title>TI Tech Support - {t.accueil}</title>
+        <title>TI Tech - {t.accueil}</title>
       </Head>
 
-      <h1 className='text-5xl text-center font-bold text-green-dark'>TI Tech Support</h1>
+      <h1 className='text-5xl text-center font-bold text-green-dark'>TI Tech</h1>
       <div className='flex mx-auto justify-center my-4'>
         <Image src={logo} alt="Tisham Islam Tech, Logo" />
       </div>
